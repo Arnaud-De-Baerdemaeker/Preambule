@@ -9,7 +9,7 @@
 	defined( 'ABSPATH' ) || exit;
 ?>
 
-
+<!-- .hero -->
 	<section class="container">
 		<div class="intro">
 			<div class="intro__container">
@@ -27,7 +27,7 @@
 						<i class="fa fa-long-arrow-right icon twin twin--borderless" aria-hidden="true"></i>
 					</span>
 				</a>
-			</div>
-		</div>
-	</section>
-</div>
+			</div> <!-- .intro_container -->
+		</div> <!-- .intro -->
+	</section> <!-- .container -->
+</div> <!-- .hero -->

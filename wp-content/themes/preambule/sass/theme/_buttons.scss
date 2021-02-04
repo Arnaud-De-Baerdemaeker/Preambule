@@ -41,6 +41,21 @@
 			color: $black;
 		}
 	}
+
+	&__footer {
+		color: $white;
+		font-family: open-sans, sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1.5rem;
+		color: $gray-dark;
+		top: -0.1rem;
+
+		&:hover {
+			text-decoration: none;
+			color: $gray-dark;;
+		}
+	}
 }
 
 .icon-border {
@@ -48,7 +63,7 @@
 	height: 2.8rem;
 	border-style: solid;
 	border-width: 0.3rem;
-	border-color: red;
+	border-color: $yellow;
 	border-radius: 2.8rem;
 	margin-left: 1rem;
 	overflow: hidden;
@@ -65,9 +80,22 @@
 		top: 0.25rem;
 	}
 
+	&--left {
+		margin-left: 0;
+		margin-right: 1rem;
+	}
+
 	.icon {
 		left: 0.4rem;
 		font-size: 1.4rem;
+
+		&--left {
+			color: $white;
+		}
+
+		&-phone {
+			left: 0.5rem;
+		}
 	}
 
 	span .icon {
@@ -87,6 +115,19 @@
 
 		&--borderless {
 			top: 0.6rem;
+		}
+
+		&--left {
+			color: $white;
+		}
+
+		&-phone {
+			top: 0.4rem;
+			left: 0.5rem;
+		}
+
+		&-envelope {
+			top: 0.4rem;
 		}
 	}
 
