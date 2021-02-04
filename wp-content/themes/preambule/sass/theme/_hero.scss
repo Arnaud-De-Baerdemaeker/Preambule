@@ -1,0 +1,13 @@
+.hero {
+	// min-height: 600px; // To remove
+	background-color: $yellow-light;
+}
+
+.intro {
+	display: flex;
+	align-items: center;
+	min-height: 600px;
+	@include mq(large) {
+		width: 55%;
+	}
+}
