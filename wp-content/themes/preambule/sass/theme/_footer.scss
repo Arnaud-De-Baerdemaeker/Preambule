@@ -1,6 +1,14 @@
 .footer {
-	min-height: 600px;
 	background-color: $black;
+
+	a {
+		color: $white;
+
+		&:hover {
+			color: $yellow;
+			text-decoration: none;
+		}
+	}
 	
 	&__content {
 		li, p {
@@ -13,10 +21,10 @@
 	}
 
 	&__infos {
-		min-height: 600px;
 		display: flex;
 		justify-content: space-between;
 		padding-top: 10rem;
+		padding-bottom: 10rem;
 
 		section {
 			max-width: 20rem;
@@ -37,9 +45,13 @@
 					margin-top: 2.5rem;
 				}
 			}
+
+			.navigation__list {
+				margin-top: 7.9rem;
+			}
 		}
 	}
-		
+	
 	&__copyright {
 		display: flex;
 		justify-content: space-between;
@@ -48,6 +60,20 @@
 		p {
 			opacity: 0.5;
 			font-size: 1.3rem;
+		}
+	}
+}
+
+.social-list {
+	&__link {
+		color:white;
+		display: inline-flex;
+
+		i {
+			font-size: 1.8rem;
+			margin-right: 1rem;
+			position: relative;
+			top: 0.2rem;
 		}
 	}
 }
