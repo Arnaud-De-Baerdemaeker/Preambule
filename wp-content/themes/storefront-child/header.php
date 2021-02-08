@@ -26,10 +26,9 @@
 	<body <?php body_class(); ?>>
 		<script src="https://use.fontawesome.com/c3352fdb8d.js"></script>
 		<?php do_action( 'wp_body_open' ); ?>
+		
 		<div class="site" id="page">
-
 			<div class="hero">
-
 				<!-- ******************* The Navbar Area ******************* -->
 				<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 

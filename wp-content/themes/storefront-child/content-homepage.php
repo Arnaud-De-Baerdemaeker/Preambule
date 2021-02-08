@@ -18,7 +18,9 @@ defined( 'ABSPATH' ) || exit;
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
+
 			
+
 		</div><!-- .row -->
 
 	</div><!-- #content -->
