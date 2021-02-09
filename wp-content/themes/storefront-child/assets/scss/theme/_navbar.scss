@@ -35,7 +35,7 @@
 		margin-left: 2.25rem;
 		height: 3.75rem;
 		position: relative;
-    	top: -3.50rem;
+    	top: -3.1rem;
 
 		&--white {
 			color: $white;
@@ -53,18 +53,20 @@
 			display: flex;
 
 			div {
-				margin-left: auto;
-
 				ul {
-					//display: flex;
+					display: flex;
 					height: 3.75rem;
 					list-style: none;
 					align-items: center;
-					margin-top: 0;
-					margin-bottom: 0;
+					margin: 0 2rem 0 auto;
+					width: fit-content;
 
 					li {
 						margin-left: 0.4rem;
+
+						&:last-of-type {
+							padding-left: 0.4rem;
+						}
 
 						a {
 							display: flex;
@@ -109,12 +111,26 @@
 	
 }
 
+@media (min-width: 768px) {
+	.col-full .site-header-cart .cart-contents .count {
+    	font-weight: 400;
+    	opacity: 1;
+    	font-size: .675em;
+	}
+}
+
 .count {
 	display: block;
-	width: 20px;
-	height: 20px;
-	border-radius: 20px;
-	background-color: pink;
+	width: 18px;
+	height: 18px;
+	border-radius: 18px;
+	background-color: $orange;
+	color: $black;
+	text-align: center;
+	line-height: 18px;
+	position: relative;
+	left: 35px;
+	bottom: 3px;
 }
 
 #menu-item-29 > a, #menu-item-30 > a {

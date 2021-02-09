@@ -112,9 +112,21 @@ function woocommerce_template_loop_add_to_cart( $args = array() ) {
 }
 add_action('init', 'woocommerce_template_loop_add_to_cart');
 
-add_filter('ngettext', 'translate_text' );
-function translate_text($translated) { 
-  $translated = str_ireplace('Items', '', $translated);
-  $translated = str_ireplace('Item', '', $translated);
-  return $translated; 
-}
+/**
+	 * Cart Link
+	 * Displayed a link to the cart including the number of items present and the cart total
+	 *
+	 * @return void
+	 * @since  1.0.0
+	 */
+	function storefront_cart_link() {
+		if ( ! storefront_woo_cart_available() ) {
+			return;
+		}
+		?>
+			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+				<?php /* translators: %d: number of items in cart */ ?>
+				<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
+			</a>
+		<?php
+	}
