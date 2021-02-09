@@ -28,7 +28,7 @@
 		<?php do_action( 'wp_body_open' ); ?>
 		
 		<div class="site" id="page">
-			<div class="hero">
+			<div class="home hero">
 				<!-- ******************* The Navbar Area ******************* -->
 				<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
@@ -50,7 +50,7 @@
 							</button>
 
 							<!-- The WordPress Menu goes here -->
-							<?php wp_nav_menu(
+							<?php /*wp_nav_menu(
 								array(
 									'theme_location'  => 'primary',
 									'container_class' => 'collapse navbar-collapse',
@@ -60,7 +60,37 @@
 									'menu_id'         => 'main-menu',
 									'depth'           => 2,
 								)
-							); ?>
+							);*/ ?>
+
+							<?php
+									/**
+									 * Functions hooked into storefront_header action
+									 *
+									 * @hooked storefront_header_container                 - 0
+									 * @hooked storefront_skip_links                       - 5
+									 * @hooked storefront_social_icons                     - 10
+									 * @hooked storefront_site_branding                    - 20
+									 * @hooked storefront_secondary_navigation             - 30
+									 * @hooked storefront_product_search                   - 40
+									 * @hooked storefront_header_container_close           - 41
+									 * @hooked storefront_primary_navigation_wrapper       - 42
+									 * @hooked storefront_primary_navigation               - 50
+									 * @hooked storefront_header_cart                      - 60
+									 * @hooked storefront_primary_navigation_wrapper_close - 68
+									 */
+									remove_action('storefront_header', 'storefront_header_container', 0);
+									remove_action('storefront_header', 'storefront_skip_links', 5);
+									remove_action('storefront_header', 'storefront_social_icons', 10);
+									remove_action('storefront_header', 'storefront_site_branding', 20);
+									remove_action('storefront_header', 'storefront_secondary_navigation', 30);
+									remove_action('storefront_header', 'storefront_product_search', 40);
+									remove_action('storefront_header', 'storefront_header_container_close', 41);
+									//remove_action('storefront_header', 'storefront_primary_navigation_wrapper', 42);
+									//remove_action('storefront_header', 'storefront_primary_navigation', 50);
+									//remove_action('storefront_header', 'storefront_header_cart', 60);
+									//remove_action('storefront_header', 'storefront_primary_navigation_wrapper_close', 68);
+									do_action( 'storefront_header' );
+							?>
 						
 						</div><!-- .container -->
 					

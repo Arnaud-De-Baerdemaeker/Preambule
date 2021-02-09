@@ -2,9 +2,14 @@
 	padding-top: 3rem;
 }
 
+.navbar-toggler {
+	display: none;
+}
+
 .brand {
 	&__container {
 		height: 6rem;
+		margin-top: 0;
 		margin-bottom: 0;
 	}
 	
@@ -25,6 +30,9 @@
 	
 	&__title {
 		margin-left: 2rem;
+		height: 6rem;
+		position: relative;
+    	top: -2rem;
 
 		&--white {
 			color: $white;
@@ -33,6 +41,25 @@
 }
 
 .nav {
+	&bar {
+		.container {
+			display: flex;
+
+			div {
+				margin-left: auto;
+
+				ul {
+					display: flex;
+					height: 6rem;
+					list-style: none;
+					align-items: center;
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
 	&-item {
 		margin-left: 2rem;
 
@@ -48,6 +75,7 @@
 		font-family: azo-sans-web, sans-serif;
 		font-size: 1.8rem;
 		font-weight: 500;
+		text-decoration: none;
 
 		&:hover {
 			color: $black;
@@ -60,8 +88,6 @@
 	background-repeat: no-repeat;
 	width: 18px;
     height: 18px;
-    position: relative;
-    top: 1rem;
 }
 
 #menu-item-29 {

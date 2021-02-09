@@ -24,53 +24,20 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<?php
-	global $product;
-	$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
-	echo '<a href="' . esc_url( $link ) . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">'; ?>
 
-		<li class="product-card">
+<li class="product-card">
+	<?php
+		global $product;
+		$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+		echo '<a href="' . esc_url( $link ) . '" class="product-link">'; ?>
 			<div class="product-card__container">
 				<div class="product-card__wrapper yellow">
 					<div class="product-card__infos">
-						<?php
-						/**
-						 * Hook: woocommerce_before_shop_loop_item_title.
-						 *
-						 * @hooked woocommerce_show_product_loop_sale_flash - 10
-						 * @hooked woocommerce_template_loop_product_thumbnail - 10
-						 */
-						?>
-
-						<div class="product-card__image">
-							<?php do_action( 'woocommerce_before_shop_loop_item_title' ); // <img /> ?>
-						</div>
-
-						<?php
-						/**
-				 		 * Hook: woocommerce_shop_loop_item_title.
-						 *
-						 * @hooked woocommerce_template_loop_product_title - 10
-						 */
-						// do_action( 'woocommerce_shop_loop_item_title' );
-						?>
-
+						<p class="product-card__date hide">2012</p>
 						<h3 class="product-card__title"><?php the_title(); ?></h3>
-
 						<h4 class="product-card__title"><?php the_field('product_subtitle'); ?></h4>
-				
-						<?php
-						/**
-						 * Hook: woocommerce_after_shop_loop_item_title.
-						 *
-						 * @hooked woocommerce_template_loop_rating - 5
-						 * @hooked woocommerce_template_loop_price - 10
-						 */
-						do_action( 'woocommerce_after_shop_loop_item_title' ); // <p>
-						?>
-
+						<?php wc_get_template( 'loop/price.php' ); ?>
 						<p class="product-card__composition"><?php the_field('product_composition'); ?></p>
-
 						<?php
 							$dishes = get_field('product_accompaniments'); ?>
 							<ul class="ingredients-list">
@@ -104,18 +71,21 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 								<?php endforeach; ?>
 							</ul>
 						<?php ?>
-						<?php
-						/**
-						 * Hook: woocommerce_after_shop_loop_item.
-						 *
-						 * @hooked woocommerce_template_loop_product_link_close - 5
-						 * @hooked woocommerce_template_loop_add_to_cart - 10
-						 */
-						// do_action( 'woocommerce_after_shop_loop_item' ); // </a>
-						?>
+					</div>
+					<div class="product-card__image">
+						<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
 					</div>
 				</div>
 			</div>
-		</li>
-	</a>
-<?php ?>
+		<?php
+			/**
+			 * Hook: woocommerce_after_shop_loop_item.
+			 *
+			 * @hooked woocommerce_template_loop_product_link_close - 5
+			 * @hooked woocommerce_template_loop_add_to_cart - 10
+			 */
+			remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
+			do_action( 'woocommerce_after_shop_loop_item' );
+		?>
+	<?php ?>
+</li>

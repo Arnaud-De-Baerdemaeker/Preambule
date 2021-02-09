@@ -1,0 +1,18 @@
+2021-02-08T13:37:48+00:00 CRITICAL syntax error, unexpected end of file in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 108
+
+2021-02-08T13:37:49+00:00 CRITICAL syntax error, unexpected end of file in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 108
+
+2021-02-08T13:56:46+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 96
+
+2021-02-08T13:56:47+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 96
+
+2021-02-08T14:00:07+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 84
+
+2021-02-08T14:00:08+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 84
+
+2021-02-08T14:44:07+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting endswitch (T_ENDSWITCH) or case (T_CASE) or default (T_DEFAULT) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 92
+
+2021-02-08T14:49:17+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting endswitch (T_ENDSWITCH) or case (T_CASE) or default (T_DEFAULT) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 93
+
+2021-02-08T14:49:18+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting endswitch (T_ENDSWITCH) or case (T_CASE) or default (T_DEFAULT) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 93
+

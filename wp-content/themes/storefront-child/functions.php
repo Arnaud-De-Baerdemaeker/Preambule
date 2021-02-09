@@ -69,3 +69,52 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
  */
+
+/*function wpcustom_deregister_scripts_and_styles(){
+    wp_deregister_style('storefront-woocommerce-style');
+    wp_deregister_style('storefront-style');
+}
+add_action( 'wp_print_styles', 'wpcustom_deregister_scripts_and_styles', 100 ); */
+
+function woocommerce_template_loop_add_to_cart( $args = array() ) {
+	global $product;
+
+	if ( $product ) {
+		$defaults = array(
+			'quantity'   => 1,
+			'class'      => implode(
+				' ',
+				array_filter(
+					array(
+						'btn',
+						'product_type_' . $product->get_type(),
+						$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
+						$product->supports( 'ajax_add_to_cart' ) && $product->is_purchasable() && $product->is_in_stock() ? 'ajax_add_to_cart' : '',
+					)
+				)
+			),
+			'attributes' => array(
+				'data-product_id'  => $product->get_id(),
+				'data-product_sku' => $product->get_sku(),
+				'aria-label'       => $product->add_to_cart_description(),
+				'rel'              => 'nofollow',
+			),
+		);
+
+		$args = apply_filters( 'woocommerce_loop_add_to_cart_args', wp_parse_args( $args, $defaults ), $product );
+
+		if ( isset( $args['attributes']['aria-label'] ) ) {
+			$args['attributes']['aria-label'] = wp_strip_all_tags( $args['attributes']['aria-label'] );
+		}
+
+		wc_get_template( 'loop/add-to-cart.php', $args );
+	}
+}
+add_action('init', 'woocommerce_template_loop_add_to_cart');
+
+add_filter('ngettext', 'translate_text' );
+function translate_text($translated) { 
+  $translated = str_ireplace('Items', '', $translated);
+  $translated = str_ireplace('Item', '', $translated);
+  return $translated; 
+}

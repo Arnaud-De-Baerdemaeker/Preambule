@@ -75,7 +75,7 @@
 
 				<section>
 					<h3>Suivez-nous</h3>
-					<ul class="social-list">
+					<ul class="social-list navigation__list">
 						<li id="menu-item-29" class="social-list__item">
 							<a title="Facebook" href="https://www.facebook.com/preambulebelgium" class="social-list__link">
 								<i class="fa fa-facebook-square icon icon--left icon-envelope" aria-hidden="true"></i> Facebook

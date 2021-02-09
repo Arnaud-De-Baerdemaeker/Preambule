@@ -4,8 +4,11 @@
 	margin: 0 auto 0 auto;
 	padding-left: 0;
 	list-style-type: none;
-	display: flex;
-	justify-content: space-between;
+
+	@include mq(large) {
+		display: flex;
+		justify-content: space-between;
+	}
 	
 	&.slick-dotted.slick-slider {
 		margin-bottom: 0;
@@ -33,9 +36,13 @@
 	}
 }
 
+.product-link {
+	text-decoration: none;
+	color: $black;
+}
+
 .product-card {
 	width: 21.875rem;
-	// height: 25rem;
 	padding-bottom: 0.625rem;
 	outline: none;
 	
@@ -50,7 +57,7 @@
 		padding: 1.25rem 1.25rem 1.25rem 1.875rem;
 		display: flex;
 		min-height: 17.1875rem;
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
+		// box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
 	}
 	
 	&__infos {

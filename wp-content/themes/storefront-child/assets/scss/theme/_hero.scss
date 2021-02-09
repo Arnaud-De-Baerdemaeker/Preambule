@@ -1,7 +1,45 @@
+.home .hero {
+	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("./../../images/assets/480-hero.png");
+		background-size: cover;
+		z-index: 1;
+
+		@include mq(720) {
+			background-image: url("./../../images/assets/720-hero.png");
+			
+		}
+
+		@media (min-width: 720px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 720px) and (min-resolution: 192dpi) {
+    		background-image: url("./../../images/assets/720@2x-hero.png");
+		}
+
+		@include mq(1280) {
+			background-image: url("./../../images/assets/1080-hero.png");
+		}
+
+		@media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1280px) and (min-resolution: 192dpi) { 
+    		background-image: url("./../../images/assets/1080@2X-hero.png");
+		}
+	}
+
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
+}
+
 .hero {
 	// min-height: 600px; // To remove
 	background-color: $yellow-light;
-	
 }
 
 .intro {

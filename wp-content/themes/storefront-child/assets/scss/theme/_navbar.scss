@@ -11,9 +11,11 @@
 		height: 3.75rem;
 		margin-top: 0;
 		margin-bottom: 0;
+		font-size: 1.5rem;
 	}
 	
 	&__link {
+		font-family: azo-sans-web, serif;
 		color: $black;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -30,15 +32,19 @@
 	}
 	
 	&__title {
-		margin-left: 1.25rem;
+		margin-left: 2.25rem;
 		height: 3.75rem;
 		position: relative;
-    	top: -1.25rem;
+    	top: -3.50rem;
 
 		&--white {
 			color: $white;
 		}
 	}
+}
+
+.col-full {
+	display: flex;
 }
 
 .nav {
@@ -50,7 +56,7 @@
 				margin-left: auto;
 
 				ul {
-					display: flex;
+					//display: flex;
 					height: 3.75rem;
 					list-style: none;
 					align-items: center;
@@ -58,13 +64,19 @@
 					margin-bottom: 0;
 
 					li {
-						margin-left: 1.5rem;
+						margin-left: 0.4rem;
 
 						a {
+							display: flex;
 							color: $black;
 							font-family: azo-sans-web, sans-serif;
 							font-weight: 500;
 							font-size: 1.125rem;
+							padding: 0.4rem;
+
+							.amount {
+								font-size: 1rem;
+							}
 						}
 					}
 				}
@@ -93,6 +105,16 @@
 			color: $black;
 		}
 	}
+
+	
+}
+
+.count {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: pink;
 }
 
 #menu-item-29 > a, #menu-item-30 > a {
