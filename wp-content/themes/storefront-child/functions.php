@@ -71,8 +71,8 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  */
 
 /*function wpcustom_deregister_scripts_and_styles(){
-    wp_deregister_style('storefront-woocommerce-style');
-    wp_deregister_style('storefront-style');
+	wp_deregister_style('storefront-woocommerce-style');
+	wp_deregister_style('storefront-style');
 }
 add_action( 'wp_print_styles', 'wpcustom_deregister_scripts_and_styles', 100 ); */
 
@@ -113,20 +113,35 @@ function woocommerce_template_loop_add_to_cart( $args = array() ) {
 add_action('init', 'woocommerce_template_loop_add_to_cart');
 
 /**
-	 * Cart Link
-	 * Displayed a link to the cart including the number of items present and the cart total
-	 *
-	 * @return void
-	 * @since  1.0.0
-	 */
-	function storefront_cart_link() {
-		if ( ! storefront_woo_cart_available() ) {
-			return;
-		}
-		?>
-			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
-				<?php /* translators: %d: number of items in cart */ ?>
-				<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
-			</a>
-		<?php
+ * Cart Link
+ * Displayed a link to the cart including the number of items present and the cart total
+ *
+ * @return void
+ * @since  1.0.0
+ */
+function storefront_cart_link() {
+	if ( ! storefront_woo_cart_available() ) {
+		return;
 	}
+	?>
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+			<?php /* translators: %d: number of items in cart */ ?>
+			<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
+		</a>
+	<?php
+}
+
+// LIMIT NUMBER OF SELECTED ITEMS WITH ACF CHECKBOXES
+// add_filter('acf/validate_value/name=your_field_name', 'only_allow_3', 20, 4);
+// function only_allow_3($valid, $value, $field, $input) {
+//   if (count($value) > 3) {
+//     $valid = 'Only Select 3';
+//   }
+//   return $valid;
+// }
+
+// CHANGE "ADD TO CART" TEXT
+add_filter( 'woocommerce_product_add_to_cart_text', 'add_to_cart_text' );
+function add_to_cart_text() {
+	return __( 'Préselectionner', 'woocommerce' );
+}

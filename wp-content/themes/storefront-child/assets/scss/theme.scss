@@ -10,13 +10,14 @@
 // Any additional imported files //
 @import "theme/mixins";
 @import "theme/utilities";
-@import "theme/theme";            // <-------- That's where you can add your own design. Thats your part!
+@import "theme/homepage";            // <-------- That's where you can add your own design. Thats your part!
 // @import "theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
 @import "theme/hero";
 @import "theme/navbar";
 @import "theme/buttons";
 @import "theme/titles";
 @import "theme/grid";
+@import "theme/half-grid";
 
 // Champagne slider
 @import "./champagne-slider/product";

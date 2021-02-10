@@ -1,0 +1,17 @@
+.product-selection {
+    display: flex;
+    justify-content: space-between;
+    color: $black;
+
+    &__title {
+        margin-bottom: 0;
+        align-self: center;
+        font-size: 2.5rem;
+        color: $black;
+    }
+
+    &__link {
+        align-self: flex-end;
+        color: $black;
+    }
+}

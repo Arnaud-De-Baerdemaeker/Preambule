@@ -20,7 +20,7 @@ body {
   background-color: #FCCB66;
 }
 
-.orange {
+.pink {
   background-color: #F5824F;
 }
 
@@ -42,6 +42,10 @@ body {
   font-size: 1.5rem;
 }
 
+.price .woocommerce-Price-currencySymbol {
+  font-size: 1.25rem;
+}
+
 .ingredients-list {
   list-style-type: none;
   padding-left: 0;
@@ -50,19 +54,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 60%;
+  margin: 0;
 }
 
 .ingredients-list__item {
   margin-left: 0.9375rem;
-}
-
-.ingredients-list__item:nth-of-type(1) {
-  margin-bottom: 0.4375rem;
-}
-
-.ingredients-list__item:nth-of-type(5) {
-  margin-left: 0;
 }
 
 .ingredients-list__item:first-child {
@@ -88,6 +84,31 @@ body {
 
 .dark_mode .black {
   background-color: #232323;
+}
+
+.product-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000000;
+}
+
+.product-selection__title {
+  margin-bottom: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+.product-selection__link {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #000000;
 }
 
 .home .hero {
@@ -197,6 +218,7 @@ body {
 
 .brand__title--white {
   color: white;
+  top: -1.3rem;
 }
 
 .col-full {
@@ -356,6 +378,7 @@ body {
   border-radius: 12.5rem;
   padding-left: 1.875rem;
   padding-right: 0.9375rem;
+  padding-bottom: 2px;
   margin-top: 4.0625rem;
   background-color: unset;
 }
@@ -401,18 +424,9 @@ body {
   position: relative;
 }
 
-.icon-border--borderless {
-  border: none;
-  position: relative;
-  top: 0.15625rem;
-}
-
-.icon-border--left {
-  margin-left: 0;
-  margin-right: 0.625rem;
-}
-
 .icon-border .icon {
+  position: relative;
+  bottom: 3.5px;
   left: 0.25rem;
   font-size: 0.875rem;
 }
@@ -422,6 +436,7 @@ body {
 }
 
 .icon-border .icon-phone {
+  bottom: 1.5px;
   left: 0.30rem;
 }
 
@@ -430,9 +445,22 @@ body {
   left: 0.2rem;
 }
 
-.icon-border span .icon {
-  top: -1px;
+.icon-border--borderless {
+  border: none;
   position: relative;
+}
+
+.icon-border--borderless .icon {
+  bottom: 0;
+}
+
+.icon-border--borderless .icon.twin {
+  top: 8px;
+}
+
+.icon-border--left {
+  margin-left: 0;
+  margin-right: 0.625rem;
 }
 
 .icon-border .twin {
@@ -443,10 +471,6 @@ body {
   opacity: 0;
   -webkit-transform: translate3d(0, 10px, 0);
   transform: translate3d(0, 10px, 0);
-}
-
-.icon-border .twin--borderless {
-  top: 0.375rem;
 }
 
 .icon-border .twin--left {
@@ -622,6 +646,90 @@ h3 {
   }
 }
 
+.half-grid {
+  position: relative;
+  overflow: hidden;
+  margin-top: 6rem;
+}
+
+.half-grid__inner-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 11;
+}
+
+.half-grid__inner-grid .content {
+  padding: 0;
+}
+
+.half-grid__inner-grid .content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.half-grid .half-grid__inner-grid img, .half-grid .half-grid__outer-grid {
+  min-height: 30rem;
+}
+
+.half-grid__outer-grid {
+  background-color: #FCCB66;
+  top: 0;
+  left: 50%;
+  right: 0;
+  padding: 4rem 4rem 4rem 7rem;
+  width: 56%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -3rem;
+}
+
+@media (min-width: 48em) {
+  .half-grid__outer-grid {
+    position: absolute;
+  }
+}
+
+.half-grid__outer-grid h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.half-grid__outer-grid p {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+
+.half-grid__outer-grid h3, .half-grid__outer-grid p {
+  max-width: 80%;
+}
+
+@media (min-width: 100em) {
+  .half-grid__outer-grid h3, .half-grid__outer-grid p {
+    max-width: 60%;
+  }
+}
+
+.half-grid__outer-grid a {
+  margin-top: 2rem;
+}
+
+.half-grid--reverse .half-grid__outer-grid {
+  left: 0;
+}
+
+.half-grid--reverse .half-grid__outer-grid .content {
+  right: 1.4rem;
+}
+
 .product-list {
   margin: 0 auto 0 auto;
   padding-left: 0;
@@ -669,70 +777,88 @@ h3 {
   color: #000000;
 }
 
-.product-card {
+.product-list .product-card {
   width: 21.875rem;
   padding-bottom: 0.625rem;
   outline: none;
 }
 
-.product-card__container {
+.product-list .product-card__container {
   width: 21.875rem;
   margin-right: auto;
   margin-left: auto;
   padding-top: 1.25rem;
 }
 
-.product-card__wrapper {
+.product-list .product-card__wrapper {
   padding: 1.25rem 1.25rem 1.25rem 1.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 17.1875rem;
+  min-height: 19.6rem;
 }
 
-.product-card__infos {
+.product-list .product-card__infos {
   width: 70%;
 }
 
-.product-card__date {
+.product-list .product-card__date {
   font-family: ivypresto-text, serif;
   font-size: 2.8125rem;
   font-style: italic;
   color: white;
   margin-top: 0;
   margin-bottom: 0;
+  line-height: 3rem;
 }
 
-.product-card__title {
-  font-size: 1.5625rem;
+.product-list .product-card__date + .product-card__title {
+  margin-top: 0.5rem;
+}
+
+.product-list .product-card__date + .product-card__title + .product-card__title + .price {
+  margin-top: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.product-list .product-card__title {
+  font-size: 1.65rem;
   font-weight: 400;
   margin-top: 1.25rem;
   margin-bottom: 0;
+  color: #000000;
+  line-height: 2rem;
 }
 
-.product-card__title + h4 {
+.product-list .product-card__title + h4 {
   font-style: italic;
   margin-top: 0;
+  color: #000000;
 }
 
-.product-card__composition {
+.product-list .product-card .price {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-list .product-card__composition {
   font-family: azo-sans-web, sans-serif;
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
 }
 
-.product-card__image {
+.product-list .product-card__image {
   width: 30%;
   margin-bottom: -15%;
 }
 
-.product-card__image img {
+.product-list .product-card__image img {
   width: 100%;
   position: relative;
   top: 10%;
 }
 
-.product-card.dark {
+.product-list .product-card.dark {
   color: white;
 }
 
@@ -822,6 +948,6 @@ h3 {
   font-size: 1.125rem;
   margin-right: 0.625rem;
   position: relative;
-  top: 0.125rem;
+  top: 4px;
 }
 /*# sourceMappingURL=theme.css.map */

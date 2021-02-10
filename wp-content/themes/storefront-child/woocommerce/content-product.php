@@ -31,13 +31,28 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
 		echo '<a href="' . esc_url( $link ) . '" class="product-link">'; ?>
 			<div class="product-card__container">
-				<div class="product-card__wrapper yellow">
+				<?php
+					$color = get_field('product_colors');
+				?>
+				<div class="product-card__wrapper <?php if($color) { echo esc_html($color['value']); } else { echo "yellow"; } ?>">
 					<div class="product-card__infos">
-						<p class="product-card__date hide">2012</p>
+						<?php
+							if(get_field('product_year')): ?>
+								<p class="product-card__date"><?php the_field('product_year'); ?></p>
+							<?php endif;
+						?>
+
+						<?php
+							
+						?>
 						<h3 class="product-card__title"><?php the_title(); ?></h3>
+
 						<h4 class="product-card__title"><?php the_field('product_subtitle'); ?></h4>
+
 						<?php wc_get_template( 'loop/price.php' ); ?>
+
 						<p class="product-card__composition"><?php the_field('product_composition'); ?></p>
+
 						<?php
 							$dishes = get_field('product_accompaniments'); ?>
 							<ul class="ingredients-list">
