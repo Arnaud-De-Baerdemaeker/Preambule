@@ -16,6 +16,57 @@
 	}
 }
 
+.instagram-slider {
+	.container {
+		display: flex;
+		align-items: center;
+		min-height: 30rem;
+	}
+
+	&__left-part {
+		width: 40%;
+		position: relative;
+		padding-right: 3rem;
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		line-height: 3rem;
+	}
+
+	&__text {
+		margin: 0;
+	}
+
+	&__icon {
+		display: flex;
+		align-self: center;
+		margin: 0 2rem;
+
+		i {
+			color: $yellow;
+			width: 100%;
+		}
+	}
+
+	&__right-part {
+		width: 60%;
+	}
+
+	&__list {
+		list-style-type: none;
+		margin: 0;
+	}
+
+	&__list-item {
+		width: 25rem;
+	}
+
+	&__link {}
+
+	&__image {}
+}
+
 .presentation-center {
 	background-color: $yellow;
 	text-align: center;

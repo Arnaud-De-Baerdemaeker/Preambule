@@ -6,6 +6,7 @@
 // Optional files - If you dont use the corresponding scripts/fonts comment em out
 // @import "assets/font-awesome";    // <-------- Font Awesome Icon font
 // @import "assets/underscores";     // <-------- Underscores media styles
+@import "slick.scss";
 
 // Any additional imported files //
 @import "theme/mixins";
@@ -18,6 +19,8 @@
 @import "theme/titles";
 @import "theme/grid";
 @import "theme/half-grid";
+@import "theme/slick";
+@import "theme/slick_nav_button";
 
 // Champagne slider
 @import "./champagne-slider/product";

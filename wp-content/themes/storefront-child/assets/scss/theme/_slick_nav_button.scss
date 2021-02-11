@@ -1,0 +1,131 @@
+.slicknav{
+	// position: absolute;
+	z-index: 10;
+	width: 100%;
+	margin-top: 2rem;
+
+	&__wrapper{
+		display: flex;
+		max-width: 40.625rem;
+	}
+
+	&__item{
+		display: block;
+		width: 3.875rem;
+		height: 3.875rem;
+		line-height: 3.875rem;
+		border-radius: 100%;
+		border: 2px solid white;
+		position: relative;
+		text-align: center;
+		box-sizing: content-box;
+
+		i{
+			color: transparentize(white, .6);
+			font-size: 1.25rem;
+			position: relative;
+			z-index: 3;
+			margin-top: 1.3125rem;
+			transition: all .3s ease;
+		}
+
+		&.prev{
+			i{
+				margin-right: 0.125rem;
+			}
+		}
+		
+		&.next{
+			// margin-left: auto;
+
+			i{
+				margin-left: 0.125rem;
+			}
+		}
+
+		&:hover{
+			cursor: pointer;
+			i{
+				color: $white;
+			}
+		}
+
+		$animationTime: 4.5s;
+		.timer {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			border-radius: 50%;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(90deg, $black 50%, $yellow 50%);
+			animation-name: timer;
+			animation-duration: $animationTime;
+			animation-timing-function: steps(200, start);
+			animation-iteration-count: infinite;
+			&:after{
+				content: "";
+				position: absolute;
+				width: 3.5rem;
+				height: 3.5rem;
+				left: 0.1875rem;
+				top: 0.1875rem;
+				border-radius: 100%;
+				background: black;
+			}
+		}
+		.mask {
+			border-radius: 100% 0 0 100% / 50% 0 0 50%;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 50%;
+			animation-name: mask;
+			animation-duration: $animationTime;
+			animation-timing-function: steps(100, start);
+			animation-iteration-count: infinite;
+			transform-origin: 100% 50%;
+		}
+	}
+}
+
+.pause{
+	animation-play-state: paused !important;
+}
+
+.product:hover{
+	.mask, .timer{
+		animation-play-state: paused !important;
+	}
+}
+// .run{
+//     animation-play-state: running !important;
+// }
+
+@keyframes timer {
+	100% {
+		 transform: rotate(360deg); 
+	} 
+}
+
+@keyframes mask {
+	0% {
+		background: $yellow;
+		transform: rotate(0deg);
+	} 
+	49.99% {
+		background: $yellow;
+		transform: rotate(-180deg);
+	} 
+	50% {
+		background: $black;
+		transform: rotate(0deg);
+	} 
+	100% {
+		background: $black;
+		transform: rotate(-180deg);
+	} 
+}

@@ -145,3 +145,7 @@ add_filter( 'woocommerce_product_add_to_cart_text', 'add_to_cart_text' );
 function add_to_cart_text() {
 	return __( 'Préselectionner', 'woocommerce' );
 }
+
+// ADD SLICK SCRIPTS
+wp_enqueue_script( 'slick-scripts', get_template_directory_uri() . '/assets/js/slick' . $suffix . '.js', array(), '', true );
+wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/custom-js' . $suffix . '.js', array( 'jquery', 'slick-scripts'), '', true );

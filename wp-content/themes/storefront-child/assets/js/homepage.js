@@ -4,16 +4,16 @@
  * Handles behaviour of the homepage featured image
  */
 ( function() {
-
+	
 	/**
 	 * Set hero content dimensions / layout
 	 * Run adaptive backgrounds and set colors
 	 */
 	document.addEventListener( 'DOMContentLoaded', function() {
 		var homepageContent = document.querySelector( '.page-template-template-homepage .type-page.has-post-thumbnail' );
-
+		console.log("hello");
 		if ( ! homepageContent ) {
-
+			
 			// Only apply layout to the homepage content component if it exists on the page
 			return;
 		}
