@@ -1,6 +1,4 @@
 .product-list {
-	// width: 43.75rem;
-	// position: relative;
 	margin: 0 auto 0 auto;
 	padding-left: 0;
 	list-style-type: none;
@@ -42,87 +40,87 @@
 }
 
 .product-list {
-.product-card {
-	width: 21.875rem;
-	padding-bottom: 0.625rem;
-	outline: none;
-	
-	&__container {
+	.product-card {
 		width: 21.875rem;
-		margin-right: auto;
-		margin-left: auto;
-		padding-top: 1.25rem;
-	}
-	
-	&__wrapper {
-		padding: 1.25rem 1.25rem 1.25rem 1.875rem;
-		display: flex;
-		min-height: 19.6rem;
-		// box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
-	}
-	
-	&__infos {
-		width: 70%;
-	}
-	
-	&__date {
-		font-family: ivypresto-text, serif;
-		font-size: 2.8125rem;
-		font-style: italic;
-		color: $white;
-		margin-top: 0;
-		margin-bottom: 0;
-		line-height: 3rem;
-
-		& + .product-card__title {
-			margin-top: 0.5rem;
-		}
-
-		& + .product-card__title + .product-card__title + .price {
-			margin-top: 0.4rem;
-			margin-bottom: 0.6rem;
-		}
-	}
-	
-	&__title {
-		font-size: 1.65rem;
-		font-weight: 400;
-		margin-top: 1.25rem;
-		margin-bottom: 0;
-		color: $black;
-		line-height: 2rem;
+		padding-bottom: 0.625rem;
+		outline: none;
 		
-		& + h4 {
+		&__container {
+			width: 21.875rem;
+			margin-right: auto;
+			margin-left: auto;
+			padding-top: 1.25rem;
+		}
+		
+		&__wrapper {
+			padding: 1.25rem 1.25rem 1.25rem 1.875rem;
+			display: flex;
+			min-height: 19.6rem;
+		}
+		
+		&__infos {
+			width: 70%;
+		}
+		
+		&__date {
+			font-family: ivypresto-text, serif;
+			font-size: 2.8125rem;
 			font-style: italic;
+			color: $white;
 			margin-top: 0;
+			margin-bottom: 0;
+			line-height: 3rem;
+
+			& + .product-card__title {
+				margin-top: 0.5rem;
+			}
+
+			& + .product-card__title + .product-card__title + .price {
+				margin-top: 0.4rem;
+				margin-bottom: 0.6rem;
+			}
+		}
+		
+		&__title {
+			font-size: 1.65rem;
+			font-weight: 400;
+			margin-top: 1.25rem;
+			margin-bottom: 0;
+			color: $black;
+			line-height: 2rem;
+			
+			& + h4 {
+				font-style: italic;
+				margin-top: 0;
+				color: $black;
+			}
+		}
+
+		.price {
+			margin-top: 1rem;
+			margin-bottom: 1.5rem;
+		}
+		
+		&__composition {
+			font-family: azo-sans-web, sans-serif;
+			font-size: 0.875rem;
+			margin-bottom: 1.5rem;
 			color: $black;
 		}
-	}
-
-	.price {
-		margin-top: 1rem;
-		margin-bottom: 1.5rem;
-	}
-	
-	&__composition {
-		font-family: azo-sans-web, sans-serif;
-		font-size: 0.875rem;
-		margin-bottom: 1.5rem;
-	}
-	
-	&__image {
-		width: 30%;
-		margin-bottom: -15%;
 		
-		img {
-			width: 100%;
-			position: relative;
-			top: 10%;
+		&__image {
+			width: 30%;
+			margin-bottom: -15%;
+			
+			img {
+				width: 100%;
+				position: relative;
+				top: 10%;
+			}
+		}
+		
+		&.dark {
+			color: $white;
 		}
 	}
-	
-	&.dark {
-		color: $white;
-	}
-}
 }

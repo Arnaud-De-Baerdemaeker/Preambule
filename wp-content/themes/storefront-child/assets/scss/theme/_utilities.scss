@@ -34,18 +34,27 @@ body {
 
 .black {
 	background-color: $black;
+
+	h1, h2, h3, h4, h5, h6, a, a:hover {
+		color: white;
+	}
+
+	p {
+		color: rgba(255, 255, 255, 0.8);
+	}
 }
-
-
 
 .price {
 	font-family: azo-sans-web, sans-serif;
 	font-weight: 700;
 	font-size: 1.5rem;
+	color: $black;
 
 	.woocommerce-Price-currencySymbol {
 		font-size: 1.25rem;
 	}
+
+	
 }
 
 .ingredients-list {
@@ -57,14 +66,6 @@ body {
 
 	&__item {
 		margin-left: 0.9375rem;
-
-	// 	&:nth-of-type(1) {
-	// 		margin-bottom: 0.4375rem;
-	// 	}
-
-	// 	&:nth-of-type(5) {
-	// 		margin-left: 0;
-	// 	}
 
 		&:first-child {
 	 		margin-left: 0;
@@ -93,4 +94,20 @@ body {
 	.black {
 		background-color: #232323;
 	}
+}
+
+.sct-wrap {
+	margin-top: 7rem;
+}
+
+.sct-wrap-bigger {
+	margin-top: 12rem;
+}
+
+p {
+	color: rgba(0, 0, 0, 0.75);
+}
+
+.site-main {
+	margin-bottom: 0;
 }

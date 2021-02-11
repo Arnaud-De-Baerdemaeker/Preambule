@@ -59,20 +59,22 @@ get_header(); ?>
 				$text = get_field('presentation_1_intro');
 				$link = get_field('presentation_1_link');
 				$image = get_field('presentation_1_image');
+				$color = get_field('presentation_1_color');
 				
 				$args = get_template_part( 'templates/half-grid', null, array(
 					'title' => $title,
 					'text' => $text,
 					'link' => $link,
 					'image' => $image,
+					'color' => $color,
 					'direction' => 'ltr'
 				));
 			?>
 			<!-- END OF PRESENTATION 1 -->
 
-			<!-- GROSSE PARTIE AU MILIEU -->
-			<!-- SLIDER -->
-			<!-- END OF SLIDER -->
+			<!-- INSTAGRAM SLIDER -->
+			
+			<!-- END OF INSTAGRAM SLIDER -->
 
 			<!-- PRESENTATION 2 -->
 			<?php
@@ -80,17 +82,18 @@ get_header(); ?>
 				$text = get_field('presentation_2_intro');
 				$link = get_field('presentation_2_link');
 				$image = get_field('presentation_2_image');
+				$color= get_field('presentation_2_color');
 				
-				$args = get_template_part( 'templates/half-grid', null, array(
+				$args = get_template_part( 'templates/half-grid-reverse', null, array(
 					'title' => $title,
 					'text' => $text,
 					'link' => $link,
 					'image' => $image,
+					'color' => $color,
 					'direction' => 'rtl'
 				));
 			?>
 			<!-- END OF PRESENTATION 2 -->
-			<!-- END OF GROSSE PARTIE AU MILIEU -->
 
 			<!-- PRESENTATION 3 -->
 			<?php
@@ -98,12 +101,14 @@ get_header(); ?>
 				$text = get_field('presentation_3_intro');
 				$link = get_field('presentation_3_link');
 				$image = get_field('presentation_3_image');
+				$color = get_field('presentation_3_color');
 
 				$args = get_template_part( 'templates/half-grid', null, array(
 					'title' => $title,
 					'text' => $text,
 					'link' => $link,
 					'image' => $image,
+					'color' => $color,
 					'direction' => 'ltr'
 				));
 			?>
@@ -114,27 +119,26 @@ get_header(); ?>
 				$title = get_field('presentation_center_title');
 				$text = get_field('presentation_center_intro');
 				$link = get_field('presentation_center_link');
+				$color = get_field('presentation_center_color');
 			?>
-			<section class="half-grid half-grid--reverse">
+			<section class="presentation-center sct-wrap <?php if($color) { echo esc_html($color['value']); } else { echo "yellow"; } ?>">
 				<div class="container">
-					<div class="half-grid__text">
-						<div class="">
-							<h3><?php echo $title; ?></h3>
-							<p><?php echo $text; ?></p>
-							<?php
-								if($link): ?>
-									<a href="<?php echo $link['url']; ?>" class="btn btn__text">
-										<?php echo $link['title']; ?>
-										<span class="icon-border icon-border--borderless">
-											<span>
-												<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
-											</span>
-											<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
+					<div class="presentation-center__content">
+						<h3><?php echo $title; ?></h3>
+						<p><?php echo $text; ?></p>
+						<?php
+							if($link): ?>
+								<a href="<?php echo $link['url']; ?>" class="btn btn__text">
+									<?php echo $link['title']; ?>
+									<span class="icon-border icon-border--borderless">
+										<span>
+											<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
 										</span>
-									</a>
-								<?php endif;
-							?>
-						</div>
+										<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
+									</span>
+								</a>
+							<?php endif;
+						?>
 					</div>
 				</div>
 			</section>

@@ -36,10 +36,19 @@ body {
   background-color: #000000;
 }
 
+.black h1, .black h2, .black h3, .black h4, .black h5, .black h6, .black a, .black a:hover {
+  color: white;
+}
+
+.black p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .price {
   font-family: azo-sans-web, sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
+  color: #000000;
 }
 
 .price .woocommerce-Price-currencySymbol {
@@ -86,6 +95,22 @@ body {
   background-color: #232323;
 }
 
+.sct-wrap {
+  margin-top: 7rem;
+}
+
+.sct-wrap-bigger {
+  margin-top: 12rem;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.site-main {
+  margin-bottom: 0;
+}
+
 .product-selection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,6 +134,30 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: #000000;
+}
+
+.presentation-center {
+  background-color: #FCCB66;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.presentation-center__content {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.presentation-center__content h3 {
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+.presentation-center__content p {
+  font-size: 0.875rem;
+}
+
+.presentation-center__content a {
+  margin-top: 2rem;
 }
 
 .home .hero {
@@ -519,6 +568,7 @@ h3 {
   font-weight: 600;
   font-style: normal;
   font-size: 1.25rem;
+  color: #000000;
 }
 
 .container {
@@ -648,8 +698,6 @@ h3 {
 
 .half-grid {
   position: relative;
-  overflow: hidden;
-  margin-top: 6rem;
 }
 
 .half-grid__inner-grid {
@@ -657,13 +705,13 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  margin-top: 3rem;
   position: relative;
   z-index: 11;
 }
 
 .half-grid__inner-grid .content {
   padding: 0;
+  margin-top: -3rem;
 }
 
 .half-grid__inner-grid .content img {
@@ -676,7 +724,6 @@ h3 {
 }
 
 .half-grid__outer-grid {
-  background-color: #FCCB66;
   top: 0;
   left: 50%;
   right: 0;
@@ -686,9 +733,16 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   margin-left: -3rem;
 }
 
@@ -696,6 +750,15 @@ h3 {
   .half-grid__outer-grid {
     position: absolute;
   }
+}
+
+.half-grid__outer-grid:before {
+  content: url("./../../images/assets/preambule-gimik.svg");
+  -webkit-transform: scaleX(1) rotate(349deg);
+          transform: scaleX(1) rotate(349deg);
+  position: absolute;
+  left: 52rem;
+  width: 8rem;
 }
 
 .half-grid__outer-grid h3 {
@@ -722,12 +785,56 @@ h3 {
   margin-top: 2rem;
 }
 
-.half-grid--reverse .half-grid__outer-grid {
-  left: 0;
+.half-grid--reverse .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.half-grid--reverse .half-grid__outer-grid .content {
-  right: 1.4rem;
+.half-grid--reverse .container .half-grid__inner-grid, .half-grid--reverse .container .half-grid__outer-grid {
+  width: 50%;
+  position: unset;
+}
+
+.half-grid--reverse .half-grid__outer-grid {
+  left: 0;
+  padding: 4rem 0;
+  max-width: 100%;
+  margin-left: 0;
+  background-color: none;
+}
+
+.half-grid--reverse .half-grid__outer-grid:before {
+  left: -2rem;
+  -webkit-transform: scaleX(-1) rotate(349deg);
+          transform: scaleX(-1) rotate(349deg);
+}
+
+.half-grid--reverse .half-grid__outer-grid h3 {
+  line-height: 3rem;
+}
+
+.half-grid--reverse .half-grid__outer-grid:after {
+  content: "";
+  background-color: #FCCB66;
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  right: 47%;
+  bottom: 0%;
+  z-index: -1;
+}
+
+.half-grid--reverse .half-grid__outer-grid.pink:after {
+  background-color: #F5824F;
+}
+
+.half-grid--reverse .half-grid__outer-grid.gray:after {
+  background-color: #DDD4D4;
+}
+
+.half-grid--reverse .half-grid__outer-grid.black:after {
+  background-color: #000000;
 }
 
 .product-list {
@@ -845,6 +952,7 @@ h3 {
   font-family: azo-sans-web, sans-serif;
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
+  color: #000000;
 }
 
 .product-list .product-card__image {
