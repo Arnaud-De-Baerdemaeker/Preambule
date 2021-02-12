@@ -83,7 +83,9 @@ get_header(); ?>
 								<a href="" class="slicknav__item prev">
 									<i class="fa fa-chevron-left icon" aria-hidden="true"></i>
 								</a>
-								<a href="" class="instagram-slider__icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+								<div class="instagram-slider__icon-container">
+									<a href="" class="instagram-slider__icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+								</div>
 								<a href="" class="slicknav__item next">
 									<div class="timer">
 										<div class="mask"></div>
