@@ -2,9 +2,12 @@ h2 {
     font-family: ivypresto-headline, serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 3.875rem;
-    line-height: 4.6875rem;
+    font-size: 2.5rem;
     color: $black;
+    @include mq(large) {
+        font-size: 3.875rem;
+        line-height: 4.6875rem;
+    }
 
     span {
         color: $yellow-darker;

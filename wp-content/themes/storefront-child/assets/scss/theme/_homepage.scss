@@ -1,37 +1,54 @@
 .product-selection {
-	display: flex;
-	justify-content: space-between;
 	color: $black;
+	@include mq(large) {
+		display: flex;
+		justify-content: space-between;
+	}
 
 	&__title {
 		margin-bottom: 0;
-		align-self: center;
 		font-size: 2.5rem;
 		color: $black;
+		@include mq(large) {
+			align-self: center;
+		}
 	}
 
 	&__link {
-		align-self: flex-end;
 		color: $black;
+		@include mq(large) {
+			align-self: flex-end;
+		}
 	}
+}
+
+.center {
+	background-color: $black;
+	padding: 4rem 0;
 }
 
 .instagram-slider {
 	.container {
-		display: flex;
-		align-items: center;
 		min-height: 30rem;
+		@include mq(large) {
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	&__left-part {
-		width: 40%;
-		position: relative;
-		padding-right: 3rem;
+		@include mq(large) {
+			width: 40%;
+			position: relative;
+			padding-right: 3rem;
+		}
 	}
 
 	&__title {
-		font-size: 2.5rem;
 		line-height: 3rem;
+		@include mq(large) {
+			font-size: 2.5rem;
+		}
 	}
 
 	&__text {
@@ -41,23 +58,25 @@
 	&__icon-container {
 		width: 2rem;
 		height: 2rem;
-		margin: 0 2rem;
+		margin: 0 1.5rem;
 		display: flex;
 		justify-content: center;
 		align-self: center;
 	}
 
 	&__icon {
-		width: 100%;
-
 		i {
 			color: $yellow;
-			width: 100%;
+			font-size: 1.5rem;
 		}
 	}
 
 	&__right-part {
-		width: 60%;
+		margin: 2rem -1rem 0 -1rem;
+		@include mq(large) {
+			width: 60%;
+			margin: 0;
+		}
 	}
 
 	&__list {
@@ -66,12 +85,13 @@
 	}
 
 	&__list-item {
-		width: 25rem;
+		height: 100%;
 	}
 
-	&__link {}
-
-	&__image {}
+	&__image {
+		object-fit: cover;
+		width: 100%;
+	}
 }
 
 .presentation-center {
@@ -80,20 +100,27 @@
 	padding: 3rem 0;
 
 	&__content {
-		max-width: 50%;
-		margin: 0 auto;
+		@include mq(large) {
+			max-width: 50%;
+			margin: 0 auto;
+		}
 
 		h3 {
-			font-size: 2.5rem;
+			font-size: 2rem;
 			color: $black;
+			@include mq(large) {
+				font-size: 2.5rem;
+			}
 		}
 
 		p {
 			font-size: 0.875rem;
+			margin: 0;
 		}
 
 		a {
 			margin-top: 2rem;
+			text-align: left;
 		}
 	}
 }

@@ -2,7 +2,6 @@
 	margin: 0 auto 0 auto;
 	padding-left: 0;
 	list-style-type: none;
-
 	@include mq(large) {
 		display: flex;
 		justify-content: space-between;
@@ -41,15 +40,19 @@
 
 .product-list {
 	.product-card {
-		width: 21.875rem;
 		padding-bottom: 0.625rem;
 		outline: none;
+		@include mq(large) {
+			width: 21.875rem;
+		}
 		
 		&__container {
-			width: 21.875rem;
 			margin-right: auto;
 			margin-left: auto;
 			padding-top: 1.25rem;
+			@include mq(large) {
+				width: 21.875rem;
+			}
 		}
 		
 		&__wrapper {

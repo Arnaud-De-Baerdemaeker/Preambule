@@ -73,69 +73,72 @@ get_header(); ?>
 			<!-- END OF PRESENTATION 1 -->
 
 			<!-- INSTAGRAM SLIDER -->
-			<div class="instagram-slider black sct-wrap">
-				<div class="container">
-					<div class="instagram-slider__left-part">
-						<h3 class="instagram-slider__title"><?php the_field('instagram_slider_title'); ?></h3>
-						<p class="instagram-slider__text"><?php the_field('instagram_slider_text'); ?></p>
-						<div class="slicknav">
-							<div class="slicknav__wrapper">
-								<a href="" class="slicknav__item prev">
-									<i class="fa fa-chevron-left icon" aria-hidden="true"></i>
-								</a>
-								<div class="instagram-slider__icon-container">
-									<a href="" class="instagram-slider__icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								</div>
-								<a href="" class="slicknav__item next">
-									<div class="timer">
-										<div class="mask"></div>
+			<div class="center sct-wrap black">
+				<div class="instagram-slider">
+					<div class="container">
+						<div class="instagram-slider__left-part">
+							<h3 class="instagram-slider__title"><?php the_field('instagram_slider_title'); ?></h3>
+							<p class="instagram-slider__text"><?php the_field('instagram_slider_text'); ?></p>
+							<div class="slicknav">
+								<div class="slicknav__wrapper">
+									<a href="" class="slicknav__item prev">
+										<i class="fa fa-chevron-left icon" aria-hidden="true"></i>
+									</a>
+									<div class="instagram-slider__icon-container">
+										<a href="" class="instagram-slider__icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 									</div>
-									<i class="fa fa-chevron-right icon" aria-hidden="true"></i>
-								</a>
+									<a href="" class="slicknav__item next">
+										<div class="timer">
+											<div class="mask"></div>
+										</div>
+										<i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+									</a>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="instagram-slider__right-part">
-						<?php
-							if(have_rows('instagram_slider')): ?>
-								<ul class="instagram-slider__list">
-									<?php
-										while(have_rows('instagram_slider')): the_row();
-											$image = get_sub_field('instagram_slider_image');
-											$link = get_sub_field('instagram_slider_link');
-											$link_url = $link['url']; ?>
-											<li class="instagram-slider__list-item">
-												<a href="<?php esc_url($link_url); ?>" class="instagram-slider__link"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="instagram-slider__image" /></a>
-											</li>
-										<?php endwhile;
-									?>
-								</ul>
-							<?php endif;
-						?>
+						<div class="instagram-slider__right-part">
+							<?php
+								if(have_rows('instagram_slider')): ?>
+									<ul class="instagram-slider__list">
+										<?php
+											while(have_rows('instagram_slider')): the_row();
+												$image = get_sub_field('instagram_slider_image');
+												$link = get_sub_field('instagram_slider_link');
+												$link_url = $link['url']; ?>
+												<li class="instagram-slider__list-item">
+													<a href="<?php esc_url($link_url); ?>" class="instagram-slider__link"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="instagram-slider__image" /></a>
+												</li>
+											<?php endwhile;
+										?>
+									</ul>
+								<?php endif;
+							?>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- END OF INSTAGRAM SLIDER -->
+			
+				<!-- END OF INSTAGRAM SLIDER -->
 
-			<!-- PRESENTATION 2 -->
-			<?php
-				$title = get_field('presentation_2_title');
-				$text = get_field('presentation_2_intro');
-				$link = get_field('presentation_2_link');
-				$image = get_field('presentation_2_image');
-				$color= get_field('presentation_2_color');
-				
-				$args = get_template_part( 'templates/half-grid-reverse', null, array(
-					'title' => $title,
-					'text' => $text,
-					'link' => $link,
-					'image' => $image,
-					'color' => $color,
-					'direction' => 'rtl'
-				));
-			?>
-			<!-- END OF PRESENTATION 2 -->
+				<!-- PRESENTATION 2 -->
+				<?php
+					$title = get_field('presentation_2_title');
+					$text = get_field('presentation_2_intro');
+					$link = get_field('presentation_2_link');
+					$image = get_field('presentation_2_image');
+					$color= get_field('presentation_2_color');
+					
+					$args = get_template_part( 'templates/half-grid-reverse', null, array(
+						'title' => $title,
+						'text' => $text,
+						'link' => $link,
+						'image' => $image,
+						'color' => $color,
+						'direction' => 'rtl'
+					));
+				?>
+				<!-- END OF PRESENTATION 2 -->
+			</div>
 
 			<!-- PRESENTATION 3 -->
 			<?php

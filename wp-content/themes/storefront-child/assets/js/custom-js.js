@@ -7,14 +7,23 @@ jQuery(function($){
 
 	function Gallery_Slick() {
 		$('.instagram-slider__list').slick({
-			dots: true,
+			dots: false,
 			arrows: true,
 			prevArrow: $(".prev"),
 			nextArrow: $(".next"),
 			autoplay: true,
 			autoplaySpeed: 4500,
 			pauseOnHover: false,
-			slidesToShow: 2
+			slidesToShow: 2,
+			responsive: [
+				{
+				  	breakpoint: 768,
+				  	settings: {
+						slidesToShow: 1,
+						centerPadding: 24
+				  	}
+				}
+			]
 		});
 
 		// On before slide change
