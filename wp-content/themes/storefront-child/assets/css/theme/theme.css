@@ -368,6 +368,16 @@ p {
   margin-bottom: 0;
 }
 
+body .site .content-area {
+  float: none;
+}
+
+label .required {
+  border: none;
+  text-decoration: none;
+  color: #FCCB66;
+}
+
 .product-selection {
   color: #000000;
 }
@@ -413,12 +423,12 @@ p {
   padding: 4rem 0 5rem 0;
 }
 
-.instagram-slider .container {
+.instagram-slider .container, .instagram-slider body .site .content-area, body .site .instagram-slider .content-area {
   min-height: 30rem;
 }
 
 @media (min-width: 62em) {
-  .instagram-slider .container {
+  .instagram-slider .container, .instagram-slider body .site .content-area, body .site .instagram-slider .content-area {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -645,13 +655,13 @@ p {
   display: flex;
 }
 
-.navbar .container {
+.navbar .container, .navbar body .site .content-area, body .site .navbar .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.navbar .container div ul {
+.navbar .container div ul, .navbar body .site .content-area div ul, body .site .navbar .content-area div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -666,15 +676,15 @@ p {
   width: fit-content;
 }
 
-.navbar .container div ul li {
+.navbar .container div ul li, .navbar body .site .content-area div ul li, body .site .navbar .content-area div ul li {
   margin-left: 0.4rem;
 }
 
-.navbar .container div ul li:last-of-type {
+.navbar .container div ul li:last-of-type, .navbar body .site .content-area div ul li:last-of-type, body .site .navbar .content-area div ul li:last-of-type {
   padding-left: 0.4rem;
 }
 
-.navbar .container div ul li a {
+.navbar .container div ul li a, .navbar body .site .content-area div ul li a, body .site .navbar .content-area div ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -685,7 +695,7 @@ p {
   padding: 0.4rem;
 }
 
-.navbar .container div ul li a .amount {
+.navbar .container div ul li a .amount, .navbar body .site .content-area div ul li a .amount, body .site .navbar .content-area div ul li a .amount {
   font-size: 1rem;
 }
 
@@ -946,38 +956,38 @@ h3 {
   color: #000000;
 }
 
-.container {
+.container, body .site .content-area {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.container:not(.is-fluid) {
+.container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
-  .container:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
     width: 100%;
     max-width: 570px;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .container:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
     width: 100%;
     max-width: 860px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .container:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
     width: 100%;
     max-width: 1150px;
   }
 }
 
 @media only screen and (min-width: 1800px) {
-  .container:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
     width: 100%;
     max-width: 1400px;
   }
@@ -1209,7 +1219,7 @@ h3 {
 }
 
 @media (min-width: 62em) {
-  .half-grid--reverse .container {
+  .half-grid--reverse .container, .half-grid--reverse body .site .content-area, body .site .half-grid--reverse .content-area {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1503,6 +1513,28 @@ h3 {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
   }
+}
+
+.woocommerce-billing-fields {
+  font-family: azo-sans-web, serif;
+}
+
+.woocommerce-billing-fields .form-row label {
+  color: #FCCB66;
+  text-transform: uppercase;
+  letter-spacing: 0.063rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.woocommerce-billing-fields .form-row input {
+  border-radius: 0.188rem;
+  background-color: fade(#000000, 10%);
+  border-color: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 0.75rem;
 }
 
 .product-list {

@@ -97,3 +97,8 @@
 					</nav><!-- .site-navigation -->
 
 				</div><!-- #wrapper-navbar end -->
+			<?php
+				if (!is_front_page()):
+					echo "</div>";
+				endif;
+			?>

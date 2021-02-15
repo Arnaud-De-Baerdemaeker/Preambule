@@ -96,7 +96,7 @@
 					</div>
 				</div>
 			</footer>
-		</div><!-- #page we need this extra closing tag here -->
-		<?php wp_footer(); ?>
+		<!-- </div>#page we need this extra closing tag here -->
+		
 	</body>
 </html>

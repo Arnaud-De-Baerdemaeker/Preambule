@@ -108,3 +108,14 @@ p {
 .site-main {
 	margin-bottom: 0;
 }
+
+body .site .content-area {
+	@extend .container;
+	float: none;
+}
+
+label .required {
+	border: none;
+	text-decoration: none;
+	color: $yellow;
+}
