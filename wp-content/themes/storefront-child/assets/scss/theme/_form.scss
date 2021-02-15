@@ -1,0 +1,43 @@
+.woocommerce-billing-fields {
+	font-family: azo-sans-web, serif;
+	font-size: 0.875rem;
+
+	.woocommerce-billing-fields__field-wrapper {
+
+		.form-row {
+
+			label {
+				color: $yellow;
+				text-transform: uppercase;
+				letter-spacing: 0.063rem;
+				font-weight: 500;
+				margin-bottom: 0.5rem;
+			}
+
+			input[type=text], input[type=tel], input[type=email] {
+				border-radius: 0.188rem;
+				background-color: rgba(0, 0, 0, 0.10);
+				border-color: unset;
+				box-shadow: unset;
+				padding: 0.5rem 1rem;
+				color: $black;
+				font-family: azo-sans-web, serif;
+				font-size: 0.875rem;
+			}
+
+			select {
+				@extend input[type=text];
+				border: none;
+
+				option {
+				}
+			}
+		}
+	}
+}
+
+label .required {
+	border: none;
+	text-decoration: none;
+	color: $yellow;
+}

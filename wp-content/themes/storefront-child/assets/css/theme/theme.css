@@ -372,12 +372,6 @@ body .site .content-area {
   float: none;
 }
 
-label .required {
-  border: none;
-  text-decoration: none;
-  color: #FCCB66;
-}
-
 .product-selection {
   color: #000000;
 }
@@ -1517,24 +1511,37 @@ h3 {
 
 .woocommerce-billing-fields {
   font-family: azo-sans-web, serif;
+  font-size: 0.875rem;
 }
 
-.woocommerce-billing-fields .form-row label {
+.woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row label {
   color: #FCCB66;
   text-transform: uppercase;
   letter-spacing: 0.063rem;
   font-weight: 500;
-  font-size: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
-.woocommerce-billing-fields .form-row input {
+.woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row input[type=text], .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row select, .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row input[type=tel], .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row input[type=email] {
   border-radius: 0.188rem;
-  background-color: fade(#000000, 10%);
-  border-color: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-size: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  padding: 0.5rem 1rem;
+  color: #000000;
+  font-family: azo-sans-web, serif;
+  font-size: 0.875rem;
+}
+
+.woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row select {
+  border: none;
+}
+
+label .required {
+  border: none;
+  text-decoration: none;
+  color: #FCCB66;
 }
 
 .product-list {

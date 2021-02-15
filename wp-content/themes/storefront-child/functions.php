@@ -149,3 +149,25 @@ function add_to_cart_text() {
 // ADD SLICK SCRIPTS
 wp_enqueue_script( 'slick-scripts', get_template_directory_uri() . '/assets/js/slick' . $suffix . '.js', array(), '', true );
 wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/custom-js' . $suffix . '.js', array( 'jquery', 'slick-scripts'), '', true );
+
+// REPLACE LABELS ON CHECKOUT PAGE
+add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
+
+function custom_override_checkout_fields($fields) {
+	$fields['billing']['billing_first_name']['label'] = __('Prénom', 'roots');
+ 	$fields['billing']['billing_last_name']['label'] = __('Nom', 'roots');
+	$fields['billing']['billing_company']['label'] = __('Société', 'roots');
+ 	$fields['billing']['billing_country']['label'] = __('Pays', 'roots');
+	$fields['billing']['billing_address_1']['label'] = __('Adresse', 'roots');
+	$fields['billing']['billing_postcode']['label'] = __('Code Postal', 'roots');
+	$fields['billing']['billing_city']['label'] = __('Ville', 'roots');
+	$fields['billing']['billing_phone']['label'] = __('Téléphone', 'roots');
+	$fields['billing']['billing_email']['label'] = __('E-mail', 'roots');
+
+	$fields['billing']['billing_company']['placeholder'] = 'Business Name';
+	$fields['billing']['billing_last_name']['placeholder'] = 'Nom';
+	$fields['billing']['billing_first_name']['placeholder'] = 'Prénom';
+ 	$fields['billing']['billing_email']['placeholder'] = 'E-mail';
+ 	$fields['billing']['billing_phone']['placeholder'] = 'Téléphone';
+ 	return $fields;
+}
