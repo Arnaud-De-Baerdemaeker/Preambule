@@ -410,7 +410,7 @@ p {
 
 .center {
   background-color: #000000;
-  padding: 4rem 0;
+  padding: 4rem 0 5rem 0;
 }
 
 .instagram-slider .container {
@@ -1342,6 +1342,7 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   max-width: 40.625rem;
+  margin-top: 2rem;
 }
 
 .slicknav__item {
