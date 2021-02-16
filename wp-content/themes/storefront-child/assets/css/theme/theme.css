@@ -368,6 +368,10 @@ p {
   margin-bottom: 0;
 }
 
+body .site .entry-content, body .site .entry-title {
+  text-align: left;
+}
+
 body .site .content-area {
   float: none;
 }
@@ -417,12 +421,12 @@ body .site .content-area {
   padding: 4rem 0 5rem 0;
 }
 
-.instagram-slider .container, .instagram-slider body .site .content-area, body .site .instagram-slider .content-area {
+.instagram-slider .container, .instagram-slider body .site .entry-content, body .site .instagram-slider .entry-content, .instagram-slider body .site .entry-title, body .site .instagram-slider .entry-title {
   min-height: 30rem;
 }
 
 @media (min-width: 62em) {
-  .instagram-slider .container, .instagram-slider body .site .content-area, body .site .instagram-slider .content-area {
+  .instagram-slider .container, .instagram-slider body .site .entry-content, body .site .instagram-slider .entry-content, .instagram-slider body .site .entry-title, body .site .instagram-slider .entry-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -649,13 +653,13 @@ body .site .content-area {
   display: flex;
 }
 
-.navbar .container, .navbar body .site .content-area, body .site .navbar .content-area {
+.navbar .container, .navbar body .site .entry-content, body .site .navbar .entry-content, .navbar body .site .entry-title, body .site .navbar .entry-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.navbar .container div ul, .navbar body .site .content-area div ul, body .site .navbar .content-area div ul {
+.navbar .container div ul, .navbar body .site .entry-content div ul, body .site .navbar .entry-content div ul, .navbar body .site .entry-title div ul, body .site .navbar .entry-title div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -670,15 +674,15 @@ body .site .content-area {
   width: fit-content;
 }
 
-.navbar .container div ul li, .navbar body .site .content-area div ul li, body .site .navbar .content-area div ul li {
+.navbar .container div ul li, .navbar body .site .entry-content div ul li, body .site .navbar .entry-content div ul li, .navbar body .site .entry-title div ul li, body .site .navbar .entry-title div ul li {
   margin-left: 0.4rem;
 }
 
-.navbar .container div ul li:last-of-type, .navbar body .site .content-area div ul li:last-of-type, body .site .navbar .content-area div ul li:last-of-type {
+.navbar .container div ul li:last-of-type, .navbar body .site .entry-content div ul li:last-of-type, body .site .navbar .entry-content div ul li:last-of-type, .navbar body .site .entry-title div ul li:last-of-type, body .site .navbar .entry-title div ul li:last-of-type {
   padding-left: 0.4rem;
 }
 
-.navbar .container div ul li a, .navbar body .site .content-area div ul li a, body .site .navbar .content-area div ul li a {
+.navbar .container div ul li a, .navbar body .site .entry-content div ul li a, body .site .navbar .entry-content div ul li a, .navbar body .site .entry-title div ul li a, body .site .navbar .entry-title div ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -689,7 +693,7 @@ body .site .content-area {
   padding: 0.4rem;
 }
 
-.navbar .container div ul li a .amount, .navbar body .site .content-area div ul li a .amount, body .site .navbar .content-area div ul li a .amount {
+.navbar .container div ul li a .amount, .navbar body .site .entry-content div ul li a .amount, body .site .navbar .entry-content div ul li a .amount, .navbar body .site .entry-title div ul li a .amount, body .site .navbar .entry-title div ul li a .amount {
   font-size: 1rem;
 }
 
@@ -970,38 +974,38 @@ h3 {
   color: #000000;
 }
 
-.container, body .site .content-area {
+.container, body .site .entry-content, body .site .entry-title {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
+.container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
-  .container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
     width: 100%;
     max-width: 570px;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
     width: 100%;
     max-width: 860px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
     width: 100%;
     max-width: 1150px;
   }
 }
 
 @media only screen and (min-width: 1800px) {
-  .container:not(.is-fluid), body .site .content-area:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
     width: 100%;
     max-width: 1400px;
   }
@@ -1233,7 +1237,7 @@ h3 {
 }
 
 @media (min-width: 62em) {
-  .half-grid--reverse .container, .half-grid--reverse body .site .content-area, body .site .half-grid--reverse .content-area {
+  .half-grid--reverse .container, .half-grid--reverse body .site .entry-content, body .site .half-grid--reverse .entry-content, .half-grid--reverse body .site .entry-title, body .site .half-grid--reverse .entry-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1531,6 +1535,7 @@ h3 {
 
 body.storefront-full-width-content.woocommerce-checkout .entry-header {
   padding-top: 5.9968353111rem;
+  background-color: #F7CA6F;
 }
 
 .woocommerce-form-coupon-toggle .woocommerce-info {

@@ -109,7 +109,11 @@ p {
 	margin-bottom: 0;
 }
 
-body .site .content-area {
+body .site .entry-content, body .site .entry-title {
 	@extend .container;
+	text-align: left;
+}
+
+body .site .content-area {
 	float: none;
 }
