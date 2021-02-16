@@ -1,0 +1,36 @@
+body.storefront-full-width-content.woocommerce-checkout .entry-header {
+	padding-top: 5.9968353111rem;
+}
+
+.woocommerce-form-coupon-toggle .woocommerce-info {
+	background-color: $yellow-dark;
+	color: $black;
+	font-family: azo-sans-web, serif;
+
+	&:before {
+		color: inherit;
+	}
+
+	.showcoupon {
+		color: inherit;
+	}
+}
+
+.checkout_coupon.woocommerce-form-coupon {
+	p {
+		font-family: azo-sans-web, serif;
+	}
+
+	.form-row.form-row-first {
+		input[type=text] {
+			font-family: azo-sans-web, serif;
+		}
+	}
+
+	.form-row.form-row-last {
+		button {
+			font-family: azo-sans-web, serif;
+			background-color: $yellow-dark;
+		}
+	}
+}
