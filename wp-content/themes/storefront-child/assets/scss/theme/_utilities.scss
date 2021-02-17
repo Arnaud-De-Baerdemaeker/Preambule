@@ -105,6 +105,14 @@ p {
 	color: rgba(0, 0, 0, 0.75);
 }
 
+a {
+	color: $yellow-dark;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 .site-main {
 	margin-bottom: 0;
 }

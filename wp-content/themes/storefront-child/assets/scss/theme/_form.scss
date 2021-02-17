@@ -1,35 +1,33 @@
 @import "select-menu";
 
-.woocommerce-billing-fields {
+.checkout.woocommerce-checkout {
 	font-family: azo-sans-web, serif;
 	font-size: 0.875rem;
 
-	.woocommerce-billing-fields__field-wrapper {
+	label {
+		color: $yellow-dark;
+		text-transform: uppercase;
+		letter-spacing: 0.063rem;
+	}
 
-		.form-row {
-
-			label {
-				color: $yellow-dark;
-				text-transform: uppercase;
-				letter-spacing: 0.063rem;
-			}
-
-			input[type=text], input[type=tel], input[type=email] {
-				border-radius: 0.188rem;
-				background-color: $gray-light;
-				border-color: unset;
-				box-shadow: unset;
-				padding: 0.5rem 1rem;
-				color: $black;
-				font-family: azo-sans-web, serif;
-				font-size: 0.875rem;
-			}	
-		}
+	input[type=text], input[type=tel], input[type=email], textarea {
+		border-radius: 0.188rem;
+		background-color: $gray-light;
+		border-color: unset;
+		box-shadow: unset;
+		padding: 0.5rem 1rem;
+		color: $black;
+		font-family: azo-sans-web, serif;
+		font-size: 0.875rem;
 	}
 }
 
 label .required {
 	border: none;
 	text-decoration: none;
+	color: $yellow-dark;
+}
+
+#order_review #payment .payment_methods li input[type=radio]:first-child:checked+label:before {
 	color: $yellow-dark;
 }

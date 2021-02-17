@@ -364,6 +364,14 @@ p {
   color: rgba(0, 0, 0, 0.75);
 }
 
+a {
+  color: #F5B42C;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .site-main {
   margin-bottom: 0;
 }
@@ -846,7 +854,7 @@ body.storefront-full-width-content.woocommerce-checkout .entry-header {
 }
 
 .form-row.place-order .order-button {
-  margin: 4.0625rem auto 0;
+  margin: 2rem auto;
 }
 
 .icon-border {
@@ -1639,18 +1647,18 @@ div.select-selected:after {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.woocommerce-billing-fields {
+.checkout.woocommerce-checkout {
   font-family: azo-sans-web, serif;
   font-size: 0.875rem;
 }
 
-.woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row label {
+.checkout.woocommerce-checkout label {
   color: #F5B42C;
   text-transform: uppercase;
   letter-spacing: 0.063rem;
 }
 
-.woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row input[type=text], .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row input[type=tel], .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper .form-row input[type=email] {
+.checkout.woocommerce-checkout input[type=text], .checkout.woocommerce-checkout input[type=tel], .checkout.woocommerce-checkout input[type=email], .checkout.woocommerce-checkout textarea {
   border-radius: 0.188rem;
   background-color: #EEEEEE;
   border-color: unset;
@@ -1665,6 +1673,10 @@ div.select-selected:after {
 label .required {
   border: none;
   text-decoration: none;
+  color: #F5B42C;
+}
+
+#order_review #payment .payment_methods li input[type=radio]:first-child:checked + label:before {
   color: #F5B42C;
 }
 
