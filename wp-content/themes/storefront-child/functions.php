@@ -143,7 +143,7 @@ function storefront_cart_link() {
 // CHANGE "ADD TO CART" TEXT
 add_filter( 'woocommerce_product_add_to_cart_text', 'add_to_cart_text' );
 function add_to_cart_text() {
-	return __( 'Préselectionner', 'woocommerce' );
+	return __( 'Preselect', 'preambule' );
 }
 
 // ADD SLICK SCRIPTS
@@ -154,30 +154,24 @@ wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/
 add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
 
 function custom_override_checkout_fields($fields) {
-	$fields['billing']['billing_first_name']['label'] = __('Prénom', 'roots');
- 	$fields['billing']['billing_last_name']['label'] = __('Nom', 'roots');
-	$fields['billing']['billing_company']['label'] = __('Société', 'roots');
- 	$fields['billing']['billing_country']['label'] = __('Pays', 'roots');
-	$fields['billing']['billing_address_1']['label'] = __('Adresse', 'roots');
-	$fields['billing']['billing_postcode']['label'] = __('Code Postal', 'roots');
-	$fields['billing']['billing_city']['label'] = __('Ville', 'roots');
-	$fields['billing']['billing_phone']['label'] = __('Téléphone', 'roots');
-	$fields['billing']['billing_email']['label'] = __('E-mail', 'roots');
-
-	$fields['billing']['billing_company']['placeholder'] = 'Business Name';
-	$fields['billing']['billing_last_name']['placeholder'] = 'Nom';
-	$fields['billing']['billing_first_name']['placeholder'] = 'Prénom';
- 	$fields['billing']['billing_email']['placeholder'] = 'E-mail';
- 	$fields['billing']['billing_phone']['placeholder'] = 'Téléphone';
+// 	$fields['billing']['billing_first_name']['label'] = __('Prénom', 'roots');
+//  	$fields['billing']['billing_last_name']['label'] = __('Nom', 'roots');
+// 	$fields['billing']['billing_company']['label'] = __('Société', 'roots');
+//  	$fields['billing']['billing_country']['label'] = __('Pays', 'roots');
+// 	$fields['billing']['billing_address_1']['label'] = __('Adresse', 'roots');
+// 	$fields['billing']['billing_postcode']['label'] = __('Code Postal', 'roots');
+// 	$fields['billing']['billing_city']['label'] = __('Ville', 'roots');
+// 	$fields['billing']['billing_phone']['label'] = __('Téléphone', 'roots');
+	$fields['billing']['billing_email']['label'] = __('E-mail', 'preambule');
  	return $fields;
 }
 
 
 // CHANGE TEXT ON ORDER BUTTON
-add_filter( 'woocommerce_order_button_html', 'ro_custom_cart_button_html' );
+add_filter( 'woocommerce_order_button_html', 'custom_cart_button_html' );
 
-function ro_custom_cart_button_html( $button_html ) {
-	$order_button_text = 'Commander';
+function custom_cart_button_html( $button_html ) {
+	$order_button_text = __('Pre-order', 'preambule');
 	$button_html = '
 		<button type="submit" class="btn btn__text order-button" name="woocommerce_checkout_place_order" id="place_order">'
 			.esc_html($order_button_text).
@@ -193,18 +187,9 @@ function ro_custom_cart_button_html( $button_html ) {
 }
 
 
-// CHANGE COUPON TEXT
-add_filter( 'woocommerce_checkout_coupon_message', 'custom_coupon_html' );
+// CHANGE THE HERO TITLE TEXT ON THANK YOU PAGE
+add_filter( 'woocommerce_endpoint_order-received_title', 'thank_you_title' );
 
-function custom_coupon_html($coupon_html) {
-	$coupon_text_1 = __('Avez-vous un coupon ? ', 'roots');
-	$coupon_text_2 = __('Cliquez ici pour entrer votre code', 'roots');
-	$coupon_html =
-		esc_html($coupon_text_1, 'woocommerce').
-		'<a href="#" class="showcoupon">'
-			.esc_html($coupon_text_2, 'woocommerce').
-		'</a>'
-	;
-
-	return $coupon_html;
+function thank_you_title( $old_title ){
+	return __('Validation', 'preambule');
 }

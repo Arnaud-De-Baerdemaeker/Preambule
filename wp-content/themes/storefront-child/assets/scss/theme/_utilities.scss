@@ -117,3 +117,9 @@ body .site .entry-content, body .site .entry-title {
 body .site .content-area {
 	float: none;
 }
+
+body.storefront-full-width-content.woocommerce-checkout .entry-header {
+	padding-top: 5.9968353111rem;
+	background-color: $yellow-light;
+	margin-bottom: 3rem;
+}
