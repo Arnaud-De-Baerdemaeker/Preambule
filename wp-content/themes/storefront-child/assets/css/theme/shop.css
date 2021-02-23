@@ -1,0 +1,14 @@
+.shop-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products {
+  width: 70%;
+}
+
+.filters {
+  width: 30%;
+}
+/*# sourceMappingURL=shop.css.map */

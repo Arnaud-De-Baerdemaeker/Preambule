@@ -1,0 +1,19 @@
+
+@include mq(large){
+    .shop-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .products{
+        width: 65%;
+        .product-list{
+            flex-wrap: wrap;
+           
+        }
+    }
+    .filters{
+        width: 20%;
+    }
+}
+

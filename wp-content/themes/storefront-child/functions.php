@@ -149,3 +149,50 @@ function add_to_cart_text() {
 // ADD SLICK SCRIPTS
 wp_enqueue_script( 'slick-scripts', get_template_directory_uri() . '/assets/js/slick' . $suffix . '.js', array(), '', true );
 wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/custom-js' . $suffix . '.js', array( 'jquery', 'slick-scripts'), '', true );
+
+function filter() {
+	
+	$filter = $_POST['filter'];
+	if (empty($filter)) {
+		$ajaxposts = new WP_Query([
+			'post_type' => 'product',
+		    'posts_per_page' => -1,
+		    'orderby' => 'menu_order', 
+		    'order' => 'desc'
+		]);
+	}
+	else {
+		$ajaxposts = new WP_Query([
+	 		'post_type' => 'product',
+			'posts_per_page' => -1,
+			'orderby' => 'menu_order', 
+			'order' => 'desc',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'producteur',
+					'field' => 'slug',
+					'terms' => $filter
+				)
+			)
+		]);
+	}
+	
+
+	$response = '';
+  
+	if($ajaxposts->have_posts()) {
+	  while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+		$response .= wc_get_template_part( 'content', 'product' );
+	  endwhile;
+	} else {
+		$empty = __("Pas de résultat", 'roots');
+		$empty_html = "<div class='empty'><h3>".$empty."</h3></div>";
+	  	$response = $empty_html;
+
+	}
+  
+	echo $response;
+	exit;
+  }
+  add_action('wp_ajax_filter_cars', 'filter');
+  add_action('wp_ajax_nopriv_filter', 'filter');

@@ -1,0 +1,179 @@
+2021-02-15T09:34:14+00:00 ERROR admin@validatePostApiKey :: 500 :: CURL error :: SSL certificate problem: self signed certificate in certificate chain on 1824 in C:\wamp64\www\preambule\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2021-02-15T09:35:28+00:00 ERROR admin@validatePostApiKey :: 500 :: CURL error :: SSL certificate problem: self signed certificate in certificate chain on 1824 in C:\wamp64\www\preambule\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2021-02-15T09:54:18+00:00 ERROR admin@validatePostApiKey :: 500 :: CURL error :: error setting certificate verify locations:
+  CAfile: ”C:\Installation_Dir\xampp\php\cacert.pem”
+  CApath: none on 1824 in C:\wamp64\www\preambule\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2021-02-15T09:56:39+00:00 ERROR admin@validatePostApiKey :: 500 :: CURL error :: error setting certificate verify locations:
+  CAfile: ”C:\Installation_Dir\xampp\php\cacert.pem”
+  CApath: none on 1824 in C:\wamp64\www\preambule\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2021-02-15T10:07:27+00:00 ERROR admin@validatePostApiKey :: 500 :: CURL error :: error setting certificate verify locations:
+  CAfile: C:\wamp64\bin\php\php7.1.9\extras\ssl\cacert.pem
+  CApath: none on 1824 in C:\wamp64\www\preambule\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2021-02-15T10:25:34+00:00 NOTICE sync_store :: posting data :: Array
+(
+    [store_post] => Array
+        (
+            [id] => 601d43b7dfee0
+            [is_syncing] => 
+            [platform] => woocommerce
+            [list_id] => b31fca0a93
+            [name] => Préambule
+            [domain] => http://preambule
+            [email_address] => de.baerdemaeker.arnaud@gmail.com
+            [currency_code] => EUR
+            [money_format] => €
+            [primary_locale] => fr_BE
+            [timezone] => Europe/Brussels
+            [phone] => 0123456789
+            [address] => Array
+                (
+                    [address1] => Rue de petit-waret 177/2-2
+                    [city] => Andenne
+                    [province] => iojsnzh
+                    [postal_code] => B5300
+                    [country] => BE
+                    [country_code] => BE
+                    [phone] => 0123456789
+                    [company] => Préambule
+                )
+
+        )
+
+)
+
+2021-02-15T10:25:37+00:00 NOTICE sync_store :: posting data :: Array
+(
+    [store_post] => Array
+        (
+            [id] => 601d43b7dfee0
+            [is_syncing] => 
+            [platform] => woocommerce
+            [list_id] => b31fca0a93
+            [name] => Préambule
+            [domain] => http://preambule
+            [email_address] => de.baerdemaeker.arnaud@gmail.com
+            [currency_code] => EUR
+            [money_format] => €
+            [primary_locale] => fr_BE
+            [timezone] => Europe/Brussels
+            [phone] => 0123456789
+            [address] => Array
+                (
+                    [address1] => Rue de petit-waret 177/2-2
+                    [city] => Andenne
+                    [province] => iojsnzh
+                    [postal_code] => B5300
+                    [country] => BE
+                    [country_code] => BE
+                    [phone] => 0123456789
+                    [company] => Préambule
+                )
+
+        )
+
+)
+
+2021-02-15T10:25:38+00:00 NOTICE sync_store :: posting data :: Array
+(
+    [store_post] => Array
+        (
+            [id] => 601d43b7dfee0
+            [is_syncing] => 
+            [platform] => woocommerce
+            [list_id] => b31fca0a93
+            [name] => Préambule
+            [domain] => http://preambule
+            [email_address] => de.baerdemaeker.arnaud@gmail.com
+            [currency_code] => EUR
+            [money_format] => €
+            [primary_locale] => fr_BE
+            [timezone] => Europe/Brussels
+            [phone] => 0123456789
+            [address] => Array
+                (
+                    [address1] => Rue de petit-waret 177/2-2
+                    [city] => Andenne
+                    [province] => iojsnzh
+                    [postal_code] => B5300
+                    [country] => BE
+                    [country_code] => BE
+                    [phone] => 0123456789
+                    [company] => Préambule
+                )
+
+        )
+
+)
+
+2021-02-15T10:25:40+00:00 NOTICE mailchimp-woocommerce-sync.started :: Starting Sync :: Mon, Feb 15, 2021 10:25 AM
+2021-02-15T10:25:40+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Coupons queued :: page 1
+2021-02-15T10:26:09+00:00 NOTICE coupon_sync.completed :: Done with the coupon queueing.
+2021-02-15T10:26:09+00:00 NOTICE sync.full_sync_manager.queue :: Starting PRODUCTS queueing.
+2021-02-15T10:26:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Products queued :: page 1
+2021-02-15T10:26:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Products queued :: page 2
+2021-02-15T10:26:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product queued :: obj_id 42
+2021-02-15T10:26:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product queued :: obj_id 44
+2021-02-15T10:26:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product queued :: obj_id 45
+2021-02-15T10:26:11+00:00 NOTICE product_sync.completed :: Done with the product queuing
+2021-02-15T10:26:12+00:00 NOTICE product_submit.success :: addStoreProduct :: #42
+2021-02-15T10:26:13+00:00 NOTICE product_submit.success :: addStoreProduct :: #44
+2021-02-15T10:26:13+00:00 NOTICE product_submit.success :: addStoreProduct :: #45
+2021-02-15T10:26:36+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Process_Orders queued :: page 1
+2021-02-15T10:26:38+00:00 NOTICE order_sync.completed :: Done with the order queueing.
+2021-02-15T10:27:42+00:00 NOTICE sync.completed :: Finished Sync :: Mon, Feb 15, 2021 10:27 AM (total time: 00:02:02)
+2021-02-15T10:29:01+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 152
+2021-02-15T10:29:07+00:00 NOTICE debug :: Order ID 152 was pending and is now processing :: Array
+(
+    [new_order] => 1
+    [tracking] => Array
+        (
+            [campaign_id] => 
+            [landing_site] => http://preambule/wp-admin/admin-ajax.php
+        )
+
+)
+
+2021-02-15T10:30:35+00:00 ERROR order_submit.error :: addStoreOrder :: #152 :: Error Code 400 :: <p>order_url: That is not a valid URL: http://preambule/my-account/view-order/152/</p> on 1886 in C:\wamp64\www\preambule\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2021-02-15T10:39:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 155
+2021-02-15T10:39:10+00:00 NOTICE debug :: Order ID 155 was pending and is now processing :: Array
+(
+    [new_order] => 1
+    [tracking] => Array
+        (
+            [campaign_id] => 
+            [landing_site] => http://preambule/wp-content/themes/storefront-child/assets/css/images/photo-1588345921523-c2dcdb7f1dcd.jfif
+        )
+
+)
+
+2021-02-15T10:41:09+00:00 ERROR order_submit.error :: addStoreOrder :: #155 :: Error Code 400 :: <p>order_url: That is not a valid URL: http://preambule/my-account/view-order/155/</p> on 1886 in C:\wamp64\www\preambule\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2021-02-15T11:03:02+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 1
+2021-02-15T11:03:02+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 158
+2021-02-15T11:03:04+00:00 NOTICE debug :: Order ID 158 was pending and is now processing :: Array
+(
+    [new_order] => 1
+    [tracking] => Array
+        (
+            [campaign_id] => 
+            [landing_site] => http://preambule/wp-content/themes/storefront-child/assets/css/images/photo-1588345921523-c2dcdb7f1dcd.jfif
+        )
+
+)
+
+2021-02-15T11:04:00+00:00 NOTICE member.sync :: Updated Member de.baerdemaeker.arnaud@gmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+            [FNAME] => Arnaud
+            [LNAME] => De Baerdemaeker
+        )
+
+)
+
+2021-02-15T11:05:21+00:00 ERROR order_submit.error :: addStoreOrder :: #158 :: Error Code 400 :: <p>order_url: That is not a valid URL: http://preambule/my-account/view-order/158/</p> on 1886 in C:\wamp64\www\preambule\wp-content\plugins\mailchimp-for-woocommerce\includes\api\class-mailchimp-api.php
+2021-02-15T15:15:48+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 45
+2021-02-15T15:17:02+00:00 NOTICE product_submit.success :: updateStoreProduct :: #45
+2021-02-15T16:17:37+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 44
+2021-02-15T16:18:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 42
+2021-02-15T16:18:51+00:00 NOTICE product_submit.success :: updateStoreProduct :: #44
+2021-02-15T16:18:51+00:00 NOTICE product_submit.success :: updateStoreProduct :: #42

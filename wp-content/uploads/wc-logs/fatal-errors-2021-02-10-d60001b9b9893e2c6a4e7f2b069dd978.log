@@ -1,0 +1,30 @@
+2021-02-10T11:19:13+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:43) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 47
+
+2021-02-10T11:20:39+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:43) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 47
+
+2021-02-10T11:21:38+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:43) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 47
+
+2021-02-10T11:25:22+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 107
+
+2021-02-10T11:25:40+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:43) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 47
+
+2021-02-10T11:26:10+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:43) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 47
+
+2021-02-10T11:26:50+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:43) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 47
+
+2021-02-10T11:27:22+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:45) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 49
+
+2021-02-10T11:27:28+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:45) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 49
+
+2021-02-10T11:28:44+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:45) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 45
+
+2021-02-10T11:28:45+00:00 CRITICAL Cannot redeclare adapt_style() (previously declared in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php:45) in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 45
+
+2021-02-10T12:01:30+00:00 CRITICAL syntax error, unexpected ':' in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 36
+
+2021-02-10T12:01:31+00:00 CRITICAL syntax error, unexpected ':' in C:\wamp64\www\preambule\wp-content\themes\storefront-child\woocommerce\content-product.php on line 36
+
+2021-02-10T13:06:41+00:00 CRITICAL syntax error, unexpected end of file in C:\wamp64\www\preambule\wp-content\themes\storefront-child\functions.php on line 146
+
+2021-02-10T13:06:42+00:00 CRITICAL syntax error, unexpected end of file in C:\wamp64\www\preambule\wp-content\themes\storefront-child\functions.php on line 146
+
