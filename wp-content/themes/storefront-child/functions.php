@@ -143,7 +143,7 @@ function storefront_cart_link() {
 // CHANGE "ADD TO CART" TEXT
 add_filter( 'woocommerce_product_add_to_cart_text', 'add_to_cart_text' );
 function add_to_cart_text() {
-	return __( 'Préselectionner', 'woocommerce' );
+	return __( 'Preselect', 'preambule' );
 }
 
 // ADD SLICK SCRIPTS

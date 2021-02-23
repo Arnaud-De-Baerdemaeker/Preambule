@@ -105,17 +105,29 @@ p {
 	color: rgba(0, 0, 0, 0.75);
 }
 
+a {
+	color: $yellow-dark;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 .site-main {
 	margin-bottom: 0;
 }
 
-body .site .content-area {
+body .site .entry-content, body .site .entry-title {
 	@extend .container;
+	text-align: left;
+}
+
+body .site .content-area {
 	float: none;
 }
 
-label .required {
-	border: none;
-	text-decoration: none;
-	color: $yellow;
+body.storefront-full-width-content.woocommerce-checkout .entry-header {
+	padding-top: 5.9968353111rem;
+	background-color: $yellow-light;
+	margin-bottom: 3rem;
 }

@@ -1,32 +1,32 @@
-.woocommerce-billing-fields {
+.woocommerce-form-coupon-toggle .woocommerce-info {
+	background-color: $yellow-dark;
+	color: $black;
 	font-family: azo-sans-web, serif;
 
-	.form-row {
+	&:before {
+		color: inherit;
+	}
 
-		label {
-			color: $yellow;
-			text-transform: uppercase;
-			letter-spacing: 0.063rem;
-			font-weight: 500;
-			font-size: 0.75rem;
-			margin-bottom: 0.5rem;
+	.showcoupon {
+		color: inherit;
+	}
+}
+
+.checkout_coupon.woocommerce-form-coupon {
+	p {
+		font-family: azo-sans-web, serif;
+	}
+
+	.form-row.form-row-first {
+		input[type=text] {
+			font-family: azo-sans-web, serif;
 		}
+	}
 
-		input {
-			border-radius: 0.188rem;
-			background-color: fade($black, 10%);
-			border-color: none;
-			box-shadow: none;
-			font-size: 0.75rem;
-		}
-
-		.woocommerce-input-wrapper {
-			select {
-
-				option {
-
-				}
-			}
+	.form-row.form-row-last {
+		button {
+			font-family: azo-sans-web, serif;
+			background-color: $yellow-dark;
 		}
 	}
 }
