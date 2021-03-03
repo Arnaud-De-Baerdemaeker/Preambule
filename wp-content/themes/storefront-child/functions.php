@@ -196,3 +196,22 @@ function filter() {
   }
   add_action('wp_ajax_filter_cars', 'filter');
   add_action('wp_ajax_nopriv_filter', 'filter');
+
+// CHANGE VIEW CART BUTTON STYLE
+// remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10);
+
+// function my_woocommerce_widget_shopping_cart_button_view_cart() {
+// 	echo
+// 		'<a href="' . esc_url( wc_get_cart_url() ) . '" class="btn">'
+// 			. esc_html__( 'View art', 'woocommerce' ) .
+// 			'<span class="icon-border">
+// 				<span>
+// 					<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
+// 				</span>
+// 				<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
+// 			</span>
+// 		</a>'
+// 	;
+// }
+
+// add_action('woocommerce_widget_shopping_cart_buttons', 'my_woocommerce_widget_shopping_cart_button_view_cart', 10);

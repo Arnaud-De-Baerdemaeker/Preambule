@@ -131,3 +131,19 @@ body.storefront-full-width-content.woocommerce-checkout .entry-header {
 	background-color: $yellow-light;
 	margin-bottom: 3rem;
 }
+
+a:focus,
+button:focus,
+.button.alt:focus,
+input:focus,
+textarea:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus {
+	outline: none;
+}

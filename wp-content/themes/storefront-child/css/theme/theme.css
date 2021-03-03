@@ -368,6 +368,22 @@ p {
   margin-bottom: 0;
 }
 
+a:focus,
+button:focus,
+.button.alt:focus,
+input:focus,
+textarea:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+input[type=submit]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus {
+  outline: none;
+}
+
 .product-selection {
   color: #000000;
 }
@@ -631,7 +647,13 @@ p {
   margin-left: 2.25rem;
   height: 3.75rem;
   position: relative;
-  top: -1.3rem;
+  top: -3.1rem;
+}
+
+@media (min-width: 48em) {
+  .brand__title {
+    top: -1.3rem;
+  }
 }
 
 .brand__title--white {
@@ -753,7 +775,7 @@ p {
   background-image: url("./../../images/assets/instagram_logo.svg");
 }
 
-.btn {
+.btn, li .added_to_cart.wc-forward {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -766,21 +788,26 @@ p {
   text-decoration: none;
   letter-spacing: 0.0625rem;
   color: #000000;
-  height: 3.125rem;
   outline: none;
 }
 
-.btn:hover .icon-border {
+@media (min-width: 48em) {
+  .btn, li .added_to_cart.wc-forward {
+    height: 3.125rem;
+  }
+}
+
+.btn:hover .icon-border, li .added_to_cart.wc-forward:hover .icon-border {
   border-color: #F5B42C;
 }
 
-.btn:hover .icon-border .twin {
+.btn:hover .icon-border .twin, li .added_to_cart.wc-forward:hover .icon-border .twin {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-.btn:hover .icon-border > span {
+.btn:hover .icon-border > span, li .added_to_cart.wc-forward:hover .icon-border > span {
   opacity: 0;
   -webkit-transform: translate3d(0, -10px, 0);
   transform: translate3d(0, -10px, 0);
@@ -794,11 +821,9 @@ p {
   border-width: 0.1875rem;
   border-color: #F5B42C;
   border-radius: 12.5rem;
-  padding-left: 1.875rem;
-  padding-right: 0.9375rem;
-  padding-bottom: 2px;
   margin-top: 4.0625rem;
   background-color: unset;
+  padding: 0.125rem 0.9375rem 0.125rem 1.875rem;
 }
 
 .btn__text:hover {
@@ -917,6 +942,11 @@ p {
   transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
+}
+
+li .added_to_cart.wc-forward {
+  background-color: unset;
+  padding: 0;
 }
 
 h2 {
@@ -1516,9 +1546,9 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
