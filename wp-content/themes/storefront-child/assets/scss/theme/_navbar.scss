@@ -35,7 +35,10 @@
 		margin-left: 2.25rem;
 		height: 3.75rem;
 		position: relative;
-    	top: -1.3rem;
+		top: -3.1rem;
+		@include mq(medium) {
+    		top: -1.3rem;
+		}
 
 		&--white {
 			color: $white;
