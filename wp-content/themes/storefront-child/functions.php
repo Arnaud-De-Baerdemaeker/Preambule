@@ -149,3 +149,22 @@ function add_to_cart_text() {
 // ADD SLICK SCRIPTS
 wp_enqueue_script( 'slick-scripts', get_template_directory_uri() . '/assets/js/slick' . $suffix . '.js', array(), '', true );
 wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/custom-js' . $suffix . '.js', array( 'jquery', 'slick-scripts'), '', true );
+
+// CHANGE VIEW CART BUTTON STYLE
+// remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10);
+
+// function my_woocommerce_widget_shopping_cart_button_view_cart() {
+// 	echo
+// 		'<a href="' . esc_url( wc_get_cart_url() ) . '" class="btn">'
+// 			. esc_html__( 'View art', 'woocommerce' ) .
+// 			'<span class="icon-border">
+// 				<span>
+// 					<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
+// 				</span>
+// 				<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
+// 			</span>
+// 		</a>'
+// 	;
+// }
+
+// add_action('woocommerce_widget_shopping_cart_buttons', 'my_woocommerce_widget_shopping_cart_button_view_cart', 10);
