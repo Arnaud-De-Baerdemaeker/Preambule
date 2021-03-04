@@ -4,7 +4,7 @@
 	list-style-type: none;
 	@include mq(large) {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-between;
 	}
 	
 	&.slick-dotted.slick-slider {

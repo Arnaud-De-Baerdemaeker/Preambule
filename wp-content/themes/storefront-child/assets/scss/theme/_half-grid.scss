@@ -5,13 +5,22 @@
 		display: flex;
 		position: relative;
 		z-index: 11;
-		@include mq(large) {
+		@include mq(xmedium) {
 			width: 50%;
 		}
 
 		.content {
 			padding: 0;
-			margin-top: -3rem;
+			margin-top: 3rem;
+			@include mq(small) {
+				margin-top: -3rem;
+			}
+			@include mq(medium) {
+				margin-top: 25rem;
+			}
+			@include mq(xmedium) {
+				margin-top: 3rem;
+			}
 			@include mq(large) {
 				margin-top: 4rem;
 			}
@@ -23,7 +32,7 @@
 	}
 
 	.half-grid__inner-grid img, .half-grid__outer-grid {
-		@include mq(large) {
+		@include mq(xmedium) {
 			min-height: 30rem;
 		}
 	}
@@ -31,8 +40,11 @@
 	&__outer-grid{
 		padding: 2rem;
 		z-index: 1;
-		@include mq(large) {
-			top: 0;
+		top: 0;
+		@include mq(medium) {
+			position: absolute;
+		}
+		@include mq(xmedium) {
 			left: 50%;
 			right: 0;
 			padding: 4rem 4rem 4rem 7rem;
@@ -43,25 +55,47 @@
 			align-items: start;
 			margin-left: -3rem;
 		}
-		@include mq($from: medium) {
-			position: absolute;
+		@include mq(large) {
+			width: 56%;
 		}
+		
 		
 		&:before {
 			content: url("./../../images/assets/preambule-gimik.svg");
 			transform: scaleX(1) rotate(349deg);
 			position: absolute;
-			// top: 10%;
 			left: 80%;
 			width: 8rem;
-			@include mq(large) {
-				left: 84.5%;
+			overflow: hidden;
+			@include mq (small) {
+				top: 23%;
+				left: 74%;
+			}
+			@include mq(ssmall) {
+				top: 13%;
+				left: 82%;
+			}
+			@include mq(xsmall) {
+				top: 11%;
+				left: 85%;
+			}
+			@include mq(medium) {
+				top: 17%;
+				left: 89%;
+			}
+			@include mq(xmedium) {
+				top: 23%;
+				left: 82%;
 			}
 		}
 
 		h3 {
 			font-size: 2rem;
+			margin-top: 2rem;
 			margin-bottom: 2rem;
+			@include mq(xmedium) {
+				margin-top: 0;
+			}
 			@include mq(large) {
 				font-size: 2.5rem;
 			}
@@ -82,7 +116,7 @@
 		a {
 			margin-top: 2rem;
 			margin-bottom: 4rem;
-			@include mq(large) {
+			@include mq(xmedium) {
 				margin-bottom: 0;
 			}
 		}
@@ -90,18 +124,28 @@
 
 	&--reverse {
 		margin: 7rem 0 2rem 0;
+		@include mq(xmedium) {
+			margin: 10rem 0 2rem 0;
+		}
 		@include mq(large) {
 			margin: 5rem 0 2rem 0;
 		}
 
 		.container {
-			@include mq(large) {
+			@include mq(xmedium) {
 				display: flex;
 				flex-direction: row-reverse;
 			}
 		}
 
 		.half-grid__inner-grid {
+			@include mq(xmedium) {
+				bottom: 3rem;
+			}
+			@include mq(large) {
+				bottom: 0;
+			}
+
 			.content {
 				margin-top: 0;
 				margin-bottom: -3rem;
@@ -124,20 +168,61 @@
 			max-width: 100%;
 			margin-left: 0;
 			background-color: none;
+			@include mq(medium) {
+				top: 20rem;
+				padding: 5rem 0 10rem 6rem;
+			}
+			@include mq(xmedium) {
+				top: 0;
+				margin-left: -3rem;
+				padding: 5rem 5rem 5rem 8rem;
+			}
+			@include mq(large) {
+				left: 0;
+				margin-left: 3rem;
+				padding: 5rem;
+			}
 
 			&:before {
-				left: -5rem;
+				left: -4rem;
 				transform: scaleX(-1) rotate(349deg);
+				overflow: hidden;
+				@include mq(small) {
+					top: 42%;
+					left: -14%;
+				}
+				@include mq(ssmall) {
+					top: 49%;
+					left: -10%;
+				}
+				@include mq(xsmall) {
+					top: 53%;
+					left: -8%;
+				}
+				@include mq(medium) {
+					top: 17%;
+					left: -13%;
+				}
+				@include mq(xmedium) {
+					top: 23%;
+					left: -9%;
+				}
+				@include mq(large) {
+					top: 23%;
+					left: -19%;
+				}
 			}
 
 			h3 {
 				max-width: unset;
 				line-height: 2.5rem;
-				@include mq(large) {
-					max-width: 80%;
+				color: $black;
+				@include mq(medium) {
+					margin-top: 0;
+				}
+				@include mq(larger) {
 					line-height: 3rem;
 				}
-				color: $black;
 			}
 
 			p {

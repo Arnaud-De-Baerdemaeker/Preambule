@@ -55,6 +55,12 @@
 				}
 
 				li {
+					&:last-child {
+						margin-top: 1rem;
+						@include mq(medium) {
+							margin-top: 0;
+						}
+					}
 					@include mq(large) {
 						margin-top: 1.5625rem;
 					}
