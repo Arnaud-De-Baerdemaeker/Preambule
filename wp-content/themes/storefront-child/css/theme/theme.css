@@ -364,8 +364,30 @@ p {
   color: rgba(0, 0, 0, 0.75);
 }
 
+a {
+  color: #F5B42C;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .site-main {
   margin-bottom: 0;
+}
+
+body .site .entry-content, body .site .entry-title {
+  text-align: left;
+}
+
+body .site .content-area {
+  float: none;
+}
+
+body.storefront-full-width-content.woocommerce-checkout .entry-header {
+  padding-top: 5.9968353111rem;
+  background-color: #F7CA6F;
+  margin-bottom: 3rem;
 }
 
 a:focus,
@@ -429,12 +451,12 @@ input[type=search]:focus {
   padding: 4rem 0 5rem 0;
 }
 
-.instagram-slider .container {
+.instagram-slider .container, .instagram-slider body .site .entry-content, body .site .instagram-slider .entry-content, .instagram-slider body .site .entry-title, body .site .instagram-slider .entry-title {
   min-height: 30rem;
 }
 
 @media (min-width: 62em) {
-  .instagram-slider .container {
+  .instagram-slider .container, .instagram-slider body .site .entry-content, body .site .instagram-slider .entry-content, .instagram-slider body .site .entry-title, body .site .instagram-slider .entry-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -667,13 +689,13 @@ input[type=search]:focus {
   display: flex;
 }
 
-.navbar .container {
+.navbar .container, .navbar body .site .entry-content, body .site .navbar .entry-content, .navbar body .site .entry-title, body .site .navbar .entry-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.navbar .container div ul {
+.navbar .container div ul, .navbar body .site .entry-content div ul, body .site .navbar .entry-content div ul, .navbar body .site .entry-title div ul, body .site .navbar .entry-title div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,15 +710,15 @@ input[type=search]:focus {
   width: fit-content;
 }
 
-.navbar .container div ul li {
+.navbar .container div ul li, .navbar body .site .entry-content div ul li, body .site .navbar .entry-content div ul li, .navbar body .site .entry-title div ul li, body .site .navbar .entry-title div ul li {
   margin-left: 0.4rem;
 }
 
-.navbar .container div ul li:last-of-type {
+.navbar .container div ul li:last-of-type, .navbar body .site .entry-content div ul li:last-of-type, body .site .navbar .entry-content div ul li:last-of-type, .navbar body .site .entry-title div ul li:last-of-type, body .site .navbar .entry-title div ul li:last-of-type {
   padding-left: 0.4rem;
 }
 
-.navbar .container div ul li a {
+.navbar .container div ul li a, .navbar body .site .entry-content div ul li a, body .site .navbar .entry-content div ul li a, .navbar body .site .entry-title div ul li a, body .site .navbar .entry-title div ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,7 +729,7 @@ input[type=search]:focus {
   padding: 0.4rem;
 }
 
-.navbar .container div ul li a .amount {
+.navbar .container div ul li a .amount, .navbar body .site .entry-content div ul li a .amount, body .site .navbar .entry-content div ul li a .amount, .navbar body .site .entry-title div ul li a .amount, body .site .navbar .entry-title div ul li a .amount {
   font-size: 1rem;
 }
 
@@ -775,7 +797,7 @@ input[type=search]:focus {
   background-image: url("./../../images/assets/instagram_logo.svg");
 }
 
-.btn, li .added_to_cart.wc-forward {
+.btn, li .added_to_cart.wc-forward, button.btn, li button.added_to_cart.wc-forward {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -792,28 +814,28 @@ input[type=search]:focus {
 }
 
 @media (min-width: 48em) {
-  .btn, li .added_to_cart.wc-forward {
+  .btn, li .added_to_cart.wc-forward, button.btn, li button.added_to_cart.wc-forward {
     height: 3.125rem;
   }
 }
 
-.btn:hover .icon-border, li .added_to_cart.wc-forward:hover .icon-border {
+.btn:hover .icon-border, li .added_to_cart.wc-forward:hover .icon-border, button.btn:hover .icon-border, li button.added_to_cart.wc-forward:hover .icon-border {
   border-color: #F5B42C;
 }
 
-.btn:hover .icon-border .twin, li .added_to_cart.wc-forward:hover .icon-border .twin {
+.btn:hover .icon-border .twin, li .added_to_cart.wc-forward:hover .icon-border .twin, button.btn:hover .icon-border .twin, li button.added_to_cart.wc-forward:hover .icon-border .twin {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-.btn:hover .icon-border > span, li .added_to_cart.wc-forward:hover .icon-border > span {
+.btn:hover .icon-border > span, li .added_to_cart.wc-forward:hover .icon-border > span, button.btn:hover .icon-border > span, li button.added_to_cart.wc-forward:hover .icon-border > span {
   opacity: 0;
   -webkit-transform: translate3d(0, -10px, 0);
   transform: translate3d(0, -10px, 0);
 }
 
-.btn__text {
+.btn__text, button.btn__text {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -826,14 +848,14 @@ input[type=search]:focus {
   padding: 0.125rem 0.9375rem 0.125rem 1.875rem;
 }
 
-.btn__text:hover {
+.btn__text:hover, button.btn__text:hover {
   text-decoration: none;
   color: #000000;
   background-color: unset;
   border-color: #F5B42C;
 }
 
-.btn__footer {
+.btn__footer, button.btn__footer {
   color: white;
   font-family: open-sans, sans-serif;
   font-weight: 400;
@@ -843,9 +865,23 @@ input[type=search]:focus {
   top: -0.0625rem;
 }
 
-.btn__footer:hover {
+.btn__footer:hover, button.btn__footer:hover {
   text-decoration: none;
   color: #C7C7C7;
+}
+
+.form-row.place-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-row.place-order .order-button {
+  margin: 2rem auto;
 }
 
 .icon-border {
@@ -949,6 +985,14 @@ li .added_to_cart.wc-forward {
   padding: 0;
 }
 
+h1 {
+  font-family: ivypresto-headline, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: #000000;
+}
+
 h2 {
   font-family: ivypresto-headline, serif;
   font-weight: 600;
@@ -976,38 +1020,38 @@ h3 {
   color: #000000;
 }
 
-.container {
+.container, body .site .entry-content, body .site .entry-title {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-.container:not(.is-fluid) {
+.container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
-  .container:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
     width: 100%;
     max-width: 570px;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .container:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
     width: 100%;
     max-width: 860px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .container:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
     width: 100%;
     max-width: 1150px;
   }
 }
 
 @media only screen and (min-width: 1800px) {
-  .container:not(.is-fluid) {
+  .container:not(.is-fluid), body .site .entry-content:not(.is-fluid), body .site .entry-title:not(.is-fluid) {
     width: 100%;
     max-width: 1400px;
   }
@@ -1239,7 +1283,7 @@ h3 {
 }
 
 @media (min-width: 62em) {
-  .half-grid--reverse .container {
+  .half-grid--reverse .container, .half-grid--reverse body .site .entry-content, body .site .half-grid--reverse .entry-content, .half-grid--reverse body .site .entry-title, body .site .half-grid--reverse .entry-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1533,6 +1577,120 @@ h3 {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
   }
+}
+
+.woocommerce-form-coupon-toggle .woocommerce-info {
+  background-color: #F5B42C;
+  color: #000000;
+  font-family: azo-sans-web, serif;
+}
+
+.woocommerce-form-coupon-toggle .woocommerce-info:before {
+  color: inherit;
+}
+
+.woocommerce-form-coupon-toggle .woocommerce-info .showcoupon {
+  color: inherit;
+}
+
+.checkout_coupon.woocommerce-form-coupon p {
+  font-family: azo-sans-web, serif;
+}
+
+.checkout_coupon.woocommerce-form-coupon .form-row.form-row-first input[type=text] {
+  font-family: azo-sans-web, serif;
+}
+
+.checkout_coupon.woocommerce-form-coupon .form-row.form-row-last button {
+  font-family: azo-sans-web, serif;
+  background-color: #F5B42C;
+}
+
+@media (min-width: 62em) {
+  .shop-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .products {
+    width: 65%;
+  }
+  .products .product-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .filters {
+    width: 20%;
+  }
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox .checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #DDD4D4;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+  background-color: #FCCB66;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: #FCCB66;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  left: 11px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .product-list {
