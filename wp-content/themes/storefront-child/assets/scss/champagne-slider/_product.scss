@@ -42,8 +42,21 @@
 	.product-card {
 		padding-bottom: 0.625rem;
 		outline: none;
+		@include mq(small2) {
+			margin-bottom: 3.125rem;
+		}
+		@include mq(ssmall2) {
+			margin-bottom: 4.375rem;
+		}
+		@include mq(medium) {
+			margin-bottom: 0;
+		}
 		@include mq(large) {
 			width: 21.875rem;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 		
 		&__container {

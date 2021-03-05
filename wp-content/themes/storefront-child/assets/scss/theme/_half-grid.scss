@@ -87,6 +87,9 @@
 				top: 23%;
 				left: 82%;
 			}
+			@include mq(xlarge) {
+				left: 84%;
+			}
 		}
 
 		h3 {
@@ -210,6 +213,12 @@
 				@include mq(large) {
 					top: 23%;
 					left: -19%;
+				}
+				@include mq(xlarge) {
+					left: -15%;
+				}
+				@include mq(xxlarge) {
+					left: -12%;
 				}
 			}
 

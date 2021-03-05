@@ -35,7 +35,7 @@
 		margin-left: 2.25rem;
 		height: 3.75rem;
 		position: relative;
-		top: -3.1rem;
+		top: -1.3rem;
 
 		&--white {
 			color: $white;
@@ -45,7 +45,10 @@
 }
 
 .col-full {
-	display: flex;
+	// @include mq(xlarge) {
+		display: flex;
+		padding-right: 0;
+	// }
 }
 
 .nav {
@@ -53,29 +56,41 @@
 		.container {
 			display: flex;
 
+			.storefront-primary-navigation {
+				margin-left: auto;
+			}
+
 			div {
 				ul {
-					display: flex;
-					height: 3.75rem;
-					list-style: none;
-					align-items: center;
-					margin: 0 2rem 0 auto;
-					width: fit-content;
+					@include mq(xlarge) {
+						display: flex;
+						height: 3.75rem;
+						list-style: none;
+						align-items: center;
+						margin: 0 2rem 0 auto;
+						width: fit-content;
+					}
 
 					li {
-						margin-left: 0.4rem;
+						@include mq(xlarge) {
+							margin-left: 0.4rem;
+						}
 
 						&:last-of-type {
-							padding-left: 0.4rem;
+							@include mq(xlarge) {
+								padding-left: 0.4rem;
+							}
 						}
 
 						a {
-							display: flex;
-							color: $black;
-							font-family: azo-sans-web, sans-serif;
-							font-weight: 500;
-							font-size: 1.125rem;
-							padding: 0.4rem;
+							@include mq(xlarge) {
+								display: flex;
+								color: $black;
+								font-family: azo-sans-web, sans-serif;
+								font-weight: 500;
+								font-size: 1.125rem;
+								padding: 0.4rem;
+							}
 
 							.amount {
 								font-size: 1rem;
@@ -131,7 +146,7 @@
 	line-height: 18px;
 	position: relative;
 	left: 35px;
-	bottom: 3px;
+	bottom: 7px;
 }
 
 #menu-item-29 > a, #menu-item-30 > a {
@@ -152,9 +167,15 @@
 	background-image: url("./../../images/assets/instagram_logo.svg");
 }
 
-.site-header-cart:hover {
+.site-header-cart .cart-contents:after {
+	position: relative;
+	bottom: 3px;
+}
 
-	.widget_shopping_cart {
-			
-	}
+ul#site-header-cart.site-header-cart.menu {
+	margin: 0 0 0 auto;
+}
+
+.site-header-cart:hover .widget_shopping_cart, .widget_shopping_cart:hover {
+	display: block;
 }
