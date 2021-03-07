@@ -8,8 +8,9 @@
 	letter-spacing: 0.0625rem;
 	color: $black;
 	outline: none;
+	margin-top: 0.313rem;
 	@include mq(medium) {
-		height: 3.125rem;
+		height: 4.125rem;
 	}
 
 	&:hover .icon-border {
@@ -37,6 +38,10 @@
 		margin-top: 4.0625rem;
 		background-color: unset;
 		padding: 0.125rem 0.9375rem 0.125rem 1.875rem;
+		@include mq($until: ssmall) {
+			padding: 0.438rem 0.75rem 0.438rem 0.75rem;
+			font-size: 0.75rem;
+		}
 
 		&:hover {
 			text-decoration: none;
@@ -115,9 +120,12 @@
 
 		.icon {
 			bottom: 0;
+			@include mq($until: ssmall) {
+				bottom: -0.375rem;
+			}
 
 			&.twin {
-				top: 8px;
+				top: 0.5rem;
 			}
 		}
 	}
