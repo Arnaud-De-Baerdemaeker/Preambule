@@ -126,7 +126,8 @@ body .site .content-area {
 	float: none;
 }
 
-body.storefront-full-width-content.woocommerce-checkout .entry-header {
+body.storefront-full-width-content.woocommerce-checkout .entry-header,
+body.storefront-full-width-content.woocommerce-cart .entry-header {
 	padding-top: 5.9968353111rem;
 	background-color: $yellow-light;
 	margin-bottom: 3rem;
