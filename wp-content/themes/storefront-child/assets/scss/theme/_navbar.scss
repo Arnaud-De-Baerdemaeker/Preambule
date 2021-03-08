@@ -37,11 +37,30 @@
 		position: relative;
 		top: -1.3rem;
 
+		@include mq($until: small2) {
+			top: -3.1rem;
+		}
+		@include mq(small2) {
+			margin-left: 1rem;
+		}
+		@include mq(medium) {
+			margin-left: 2.25rem;
+			top: -3.1rem;
+		}
+		@include mq(xlarge) {
+			margin-left: 1rem;
+			top: -1.3rem;
+		}
+
 		&--white {
 			color: $white;
 			top: -1.3rem;
 		}
 	}
+}
+
+.menu-toggle {
+
 }
 
 .col-full {

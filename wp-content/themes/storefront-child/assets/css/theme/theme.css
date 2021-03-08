@@ -705,6 +705,32 @@ input[type=search]:focus {
   top: -1.3rem;
 }
 
+@media (max-width: 23.74em) {
+  .brand__title {
+    top: -3.1rem;
+  }
+}
+
+@media (min-width: 23.75em) {
+  .brand__title {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .brand__title {
+    margin-left: 2.25rem;
+    top: -3.1rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .brand__title {
+    margin-left: 1rem;
+    top: -1.3rem;
+  }
+}
+
 .brand__title--white {
   color: white;
   top: -1.3rem;
