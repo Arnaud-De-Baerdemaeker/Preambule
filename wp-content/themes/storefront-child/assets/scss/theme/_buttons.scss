@@ -1,4 +1,4 @@
-.btn, button.btn {
+.btn, button.btn, .wc-proceed-to-checkout .button.checkout-button.btn {
 	display: flex;
 	align-items: center;
 	font-family: azo-sans-web, sans-serif;
@@ -48,6 +48,18 @@
 			color: $black;
 			background-color: unset;
 			border-color: $yellow-dark;
+		}
+
+		&--small-margin {
+			margin: 1rem 1rem 1rem 0;
+		}
+
+		&--checkout {
+			font-size: 1.0625rem;
+
+			&:after {
+				display: none;
+			}
 		}
 	}
 
@@ -122,6 +134,12 @@
 			bottom: 0;
 			@include mq($until: ssmall) {
 				bottom: -0.375rem;
+			}
+
+			&--checkout {
+				@include mq(medium) {
+					bottom: -0.063rem;
+				}
 			}
 
 			&.twin {

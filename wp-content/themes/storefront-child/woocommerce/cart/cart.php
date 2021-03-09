@@ -145,7 +145,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 					<?php } ?>
 
-					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+					<button type="submit" class="button btn btn__text btn__text--small-margin" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>">
+						<?php esc_html_e( 'Update cart', 'woocommerce' ); ?>
+						<span class="icon-border icon-border--borderless">
+							<span>
+								<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
+							</span>
+							<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
+						</span>
+					</button>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
