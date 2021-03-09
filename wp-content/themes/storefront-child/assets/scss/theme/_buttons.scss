@@ -164,8 +164,13 @@
 	}
 }
 
-li .added_to_cart.wc-forward {
-	// @extend .btn;
-	// background-color: unset;
-	// padding: 0;
+li a.added_to_cart.wc-forward {
+	@extend .btn;
+	background-color: unset;
+	padding: 0;
+	margin-top: 0;
+
+	&:after {
+		display: none;
+	}
 }

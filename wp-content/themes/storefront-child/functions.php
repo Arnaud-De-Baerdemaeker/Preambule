@@ -150,7 +150,14 @@ function add_to_cart_text() {
 wp_enqueue_script( 'slick-scripts', get_template_directory_uri() . '/assets/js/slick' . $suffix . '.js', array(), '', true );
 wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/custom-js' . $suffix . '.js', array( 'jquery', 'slick-scripts'), '', true );
 
-// CHANGE VIEW CART BUTTON STYLE
+// ENQUEUE THE NEW ADD-TO-CART.JS FILE AND DEQUEUE THE ORIGINAL
+add_action('wp_enqueue_scripts', 'js_file_change', 100);
+function js_file_change() {
+    wp_dequeue_script('add-to-cart');
+    wp_enqueue_script('my-add-to-cart', get_stylesheet_directory_uri().'/assets/js/my-add-to-cart.js', array('jquery'));
+}
+
+// CHANGE WIDGET VIEW CART BUTTON STYLE
 // remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10);
 
 // function my_woocommerce_widget_shopping_cart_button_view_cart() {
