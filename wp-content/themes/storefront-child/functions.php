@@ -146,6 +146,25 @@ function add_to_cart_text() {
 	return __( 'Preselect', 'preambule' );
 }
 
+// CHANGE TEXT ON ORDER BUTTON
+add_filter( 'woocommerce_order_button_html', 'custom_cart_button_html' );
+
+function custom_cart_button_html( $button_html ) {
+	$order_button_text = __('Pre-order', 'preambule');
+	$button_html = '
+		<button type="submit" class="btn btn__text order-button" name="woocommerce_checkout_place_order" id="place_order">'
+			.esc_html($order_button_text).
+			'<span class="icon-border icon-border--borderless">
+				<span>
+					<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
+				</span>
+				<i class="fa fa-long-arrow-right icon twin twin--borderless" aria-hidden="true"></i>
+			</span>
+		</button>'
+	;
+	return $button_html;
+}
+
 // ADD SLICK SCRIPTS
 wp_enqueue_script( 'slick-scripts', get_template_directory_uri() . '/assets/js/slick' . $suffix . '.js', array(), '', true );
 wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/custom-js' . $suffix . '.js', array( 'jquery', 'slick-scripts'), '', true );
