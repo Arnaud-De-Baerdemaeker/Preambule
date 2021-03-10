@@ -2095,6 +2095,112 @@ h3 {
   text-align: right;
 }
 
+/* The container must be positioned relative: */
+#billing_country_field {
+  position: relative;
+  font-family: Arial;
+}
+
+#billing_country_field select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+div.select-selected {
+  background-color: #EEEEEE;
+  border-radius: 0.188rem;
+  border: unset;
+  color: #000000;
+  font-family: azo-sans-web, serif;
+}
+
+/* Style the arrow inside the select element: */
+div.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 39px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active {
+  border-radius: 0.188rem 0.188rem 0 0;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000000 transparent;
+  top: 34px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #000000;
+  font-family: azo-sans-web, serif;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #EEEEEE;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  max-height: 25rem;
+  overflow-y: scroll;
+  border-radius: 0 0 0.188rem 0.188rem;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.checkout.woocommerce-checkout {
+  font-family: azo-sans-web, serif;
+  font-size: 0.875rem;
+}
+
+.checkout.woocommerce-checkout label {
+  color: #F5B42C;
+  text-transform: uppercase;
+  letter-spacing: 0.063rem;
+}
+
+.checkout.woocommerce-checkout input[type=text], .checkout.woocommerce-checkout input[type=tel], .checkout.woocommerce-checkout input[type=email], .checkout.woocommerce-checkout textarea {
+  border-radius: 0.188rem;
+  background-color: #EEEEEE;
+  border-color: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  padding: 0.5rem 1rem;
+  color: #000000;
+  font-family: azo-sans-web, serif;
+  font-size: 0.875rem;
+}
+
+label .required {
+  border: none;
+  text-decoration: none;
+  color: #F5B42C;
+}
+
+#order_review #payment .payment_methods li input[type=radio]:first-child:checked + label:before {
+  color: #F5B42C;
+}
+
 .product-list {
   margin: 0 auto 0 auto;
   padding-left: 0;
