@@ -993,7 +993,7 @@ input[type=search]:focus {
   }
 }
 
-.btn, li a.added_to_cart.wc-forward {
+.btn, li a.added_to_cart.wc-forward, button.btn, .wc-proceed-to-checkout .button.checkout-button.btn, .wc-proceed-to-checkout li a.button.checkout-button.added_to_cart.wc-forward, li .wc-proceed-to-checkout a.button.checkout-button.added_to_cart.wc-forward {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1011,22 +1011,22 @@ input[type=search]:focus {
 }
 
 @media (min-width: 48em) {
-  .btn, li a.added_to_cart.wc-forward {
+  .btn, li a.added_to_cart.wc-forward, button.btn, .wc-proceed-to-checkout .button.checkout-button.btn, .wc-proceed-to-checkout li a.button.checkout-button.added_to_cart.wc-forward, li .wc-proceed-to-checkout a.button.checkout-button.added_to_cart.wc-forward {
     height: 4.125rem;
   }
 }
 
-.btn:hover .icon-border, li a.added_to_cart.wc-forward:hover .icon-border {
+.btn:hover .icon-border, li a.added_to_cart.wc-forward:hover .icon-border, button.btn:hover .icon-border, .wc-proceed-to-checkout .button.checkout-button.btn:hover .icon-border, .wc-proceed-to-checkout li a.button.checkout-button.added_to_cart.wc-forward:hover .icon-border, li .wc-proceed-to-checkout a.button.checkout-button.added_to_cart.wc-forward:hover .icon-border {
   border-color: #F5B42C;
 }
 
-.btn:hover .icon-border .twin, li a.added_to_cart.wc-forward:hover .icon-border .twin {
+.btn:hover .icon-border .twin, li a.added_to_cart.wc-forward:hover .icon-border .twin, button.btn:hover .icon-border .twin, .wc-proceed-to-checkout .button.checkout-button.btn:hover .icon-border .twin, .wc-proceed-to-checkout li a.button.checkout-button.added_to_cart.wc-forward:hover .icon-border .twin, li .wc-proceed-to-checkout a.button.checkout-button.added_to_cart.wc-forward:hover .icon-border .twin {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-.btn:hover .icon-border > span, li a.added_to_cart.wc-forward:hover .icon-border > span {
+.btn:hover .icon-border > span, li a.added_to_cart.wc-forward:hover .icon-border > span, button.btn:hover .icon-border > span, .wc-proceed-to-checkout .button.checkout-button.btn:hover .icon-border > span, .wc-proceed-to-checkout li a.button.checkout-button.added_to_cart.wc-forward:hover .icon-border > span, li .wc-proceed-to-checkout a.button.checkout-button.added_to_cart.wc-forward:hover .icon-border > span {
   opacity: 0;
   -webkit-transform: translate3d(0, -10px, 0);
   transform: translate3d(0, -10px, 0);
@@ -1065,6 +1065,7 @@ input[type=search]:focus {
 
 .btn__text--checkout, button.btn__text--checkout, .wc-proceed-to-checkout .button.checkout-button.btn__text--checkout {
   font-size: 1.0625rem;
+  color: #000000;
 }
 
 .btn__text--checkout:after, button.btn__text--checkout:after, .wc-proceed-to-checkout .button.checkout-button.btn__text--checkout:after {
@@ -1208,13 +1209,6 @@ input[type=search]:focus {
   transition-timing-function: ease;
 }
 
-h1 {
-  font-family: ivypresto-headline, serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 2.5rem;
-  color: #000000;
-}
 li a.added_to_cart.wc-forward {
   background-color: unset;
   padding: 0;
@@ -1223,6 +1217,14 @@ li a.added_to_cart.wc-forward {
 
 li a.added_to_cart.wc-forward:after {
   display: none;
+}
+
+h1 {
+  font-family: ivypresto-headline, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: #000000;
 }
 
 h2 {
@@ -2383,4 +2385,3 @@ h3 {
   position: relative;
   top: 4px;
 }
-/*# sourceMappingURL=theme.css.map */
