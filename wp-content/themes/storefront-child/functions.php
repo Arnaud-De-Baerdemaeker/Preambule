@@ -143,7 +143,7 @@ function storefront_cart_link() {
 // CHANGE "ADD TO CART" TEXT
 add_filter( 'woocommerce_product_add_to_cart_text', 'add_to_cart_text' );
 function add_to_cart_text() {
-	return __( 'Preselect', 'preambule' );
+	return __( 'Pre-select', 'preambule' );
 }
 
 // CHANGE TEXT ON ORDER BUTTON
@@ -204,7 +204,7 @@ function filter() {
 		$response .= wc_get_template_part( 'content', 'product' );
 	  endwhile;
 	} else {
-		$empty = __("Pas de résultat", 'roots');
+		$empty = __("No results", 'preambule');
 		$empty_html = "<div class='empty'><h3>".$empty."</h3></div>";
 	  	$response = $empty_html;
 

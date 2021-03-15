@@ -22,7 +22,7 @@ get_header( 'shop' );
 ?>
 
 <div class="container">
-	<h2 class="woocommerce-products-header__title page-title"><?php _e('Notre gamme', 'roots'); ?></h2>
+	<h2 class="woocommerce-products-header__title page-title"><?php _e('Our range', 'preambule'); ?></h2>
 </div>
 
 <?php
@@ -40,8 +40,8 @@ do_action( 'woocommerce_before_main_content' );
 
 		<div class="shop-wrapper">
 			<div class="filters">
-			<h3><?php _e('Filtrer', 'roots'); ?></h3>
-			<h4><?php _e('par Producteurs', 'roots'); ?></h4>
+			<h3><?php _e('Filter', 'preambule'); ?></h3>
+			<h4><?php _e('by Producers', 'preambule'); ?></h4>
 					<?php
 						$categories = get_categories(array('taxonomy' => 'producteur', 'hide_empty'=> 0, 'order' => 'ASC'));
 						
@@ -57,7 +57,7 @@ do_action( 'woocommerce_before_main_content' );
 							endforeach;
 						echo "</div>";
 					?>
-			<h4><?php _e('par Types', 'roots'); ?></h4>
+			<h4><?php _e('by Types', 'preambule'); ?></h4>
 					<?php
 						$categories = get_categories(array('taxonomy' => 'champagne_type', 'hide_empty'=> 0, 'order' => 'ASC'));
 						
