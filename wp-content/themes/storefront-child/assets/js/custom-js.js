@@ -13,8 +13,6 @@ jQuery(function($){
         		var tax_query = [];  
 				var current_filters = [];
 
-				
-
                 $(document).on('click touchstart', '.filter-list_item', function(e) {
 
                     if ( ( $(e.target).is('label[for]') && $('input#' + $(e.target).attr('for')).length ) ||  $(e.target).hasClass('checkmark')) {

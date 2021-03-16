@@ -21,9 +21,9 @@ get_header( 'shop' );
 
 ?>
 
-<div class="container">
-	<h2 class="woocommerce-products-header__title page-title"><?php _e('Our range', 'preambule'); ?></h2>
-</div>
+<header class="entry-header">
+	<h2 class="woocommerce-products-header__title entry-title"><?php _e('Our range', 'preambule'); ?></h2>
+</header><!-- .entry-header -->
 
 <?php
 
@@ -38,7 +38,7 @@ do_action( 'woocommerce_before_main_content' );
 
 		?>
 
-		<div class="shop-wrapper">
+		<div class="shop-wrapper container">
 			<div class="filters">
 			<h3><?php _e('Filter', 'preambule'); ?></h3>
 			<h4><?php _e('by Producers', 'preambule'); ?></h4>
