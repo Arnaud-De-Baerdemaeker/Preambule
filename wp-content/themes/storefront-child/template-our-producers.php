@@ -18,45 +18,34 @@ get_template_part('templates/mini-hero');
 			<?php
 			if(have_rows('producers')):
 				while(have_rows('producers')): the_row();
-					$producer_name = get_sub_field('producer_name');
-					$producer_description = get_sub_field('producer_description');
+
 					?>
-						
-					<h3><?php echo $producer_name; ?></h3>
-					<p><?php echo $producer_description ?></p>
 
+					<!-- PRESENTATION  -->
 					<?php
-					if(have_rows('producer_links')):
-						?>
+						$title = get_sub_field('producer_name');
+						$text = get_sub_field('producer_description');
+						$link = get_field('producer_links');
+						// $image = get_field('presentation_3_image');
 
-						<ul>
+						$args = get_template_part( 'templates/half-grid', null, array(
+							'title' => $title,
+							'text' => $text,
+							'link' => $link,
+							// 'image' => $image, // add image
+							'direction' => 'ltr'
+						));
+					?>
+					<!-- END OF PRESENTATION  -->
 						
-							<?php
-							while(have_rows('producer_links')): the_row();
-								$producer_links_name = get_sub_field('producer_links_name');
-								$producer_links_link = get_sub_field('producer_links_link');
-								?>
-
-								<li>
-									<a href="<?php echo esc_url($producer_links_link); ?>"><?php echo $producer_links_name; ?></a>
-								</li>
-									
-							<?php
-							endwhile;
-							?>
-
-						</ul>
-
-						<?php
-						else:
-
-						endif;
-						
+					<?php
 					endwhile;
 				else:
 					
 				endif;
 				?>
+
+				
 
 			</div>
 		</main><!-- #main -->

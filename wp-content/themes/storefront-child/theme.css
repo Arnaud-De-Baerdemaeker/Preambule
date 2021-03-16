@@ -373,8 +373,12 @@ body .site .content-area {
 }
 
 body.storefront-full-width-content.woocommerce-checkout .entry-header,
-body.storefront-full-width-content.woocommerce-cart .entry-header {
-  padding-top: 5.9968353111rem;
+body.storefront-full-width-content.woocommerce-cart .entry-header,
+body.storefront-full-width-content.page-id-14 .entry-header,
+body.storefront-full-width-content.page-id-23 .entry-header,
+body.storefront-full-width-content.page-id-25 .entry-header,
+body.storefront-full-width-content.post-type-archive-product .entry-header {
+  padding: 5.9968353111rem 0;
   background-color: #F7CA6F;
   margin-bottom: 3rem;
 }
@@ -852,6 +856,10 @@ input[type=search]:focus {
 
 .navbar .container .col-full ul li a .amount, .navbar body .site .entry-content .col-full ul li a .amount, body .site .navbar .entry-content .col-full ul li a .amount, .navbar body .site .entry-title .col-full ul li a .amount, body .site .navbar .entry-title .col-full ul li a .amount {
   font-size: 1rem;
+}
+
+.navbar .container .col-full ul li.current-menu-item a, .navbar body .site .entry-content .col-full ul li.current-menu-item a, body .site .navbar .entry-content .col-full ul li.current-menu-item a, .navbar body .site .entry-title .col-full ul li.current-menu-item a, body .site .navbar .entry-title .col-full ul li.current-menu-item a {
+  color: #7E5500;
 }
 
 .nav-item {
@@ -1931,6 +1939,10 @@ h3 {
 
 .wc-proceed-to-checkout {
   text-align: right;
+}
+
+a.button.checkout.wc-forward {
+  display: none;
 }
 
 /* The container must be positioned relative: */

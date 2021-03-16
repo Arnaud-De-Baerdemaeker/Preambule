@@ -171,6 +171,15 @@
 							.amount {
 								font-size: 1rem;
 							}
+							&:hover{
+								color: $yellow-darker;
+							}
+						}
+
+						&.current-menu-item{
+							a{
+								color: $yellow-darker-x;
+							}
 						}
 					}
 				}

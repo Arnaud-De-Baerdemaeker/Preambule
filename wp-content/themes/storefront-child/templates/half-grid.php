@@ -13,7 +13,9 @@
 						<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
 					</span>
 				</a>
-			<?php endif;
+			<?php else: // If link is a repeater, show links.
+
+			endif;
 		?>
 	</div>
 
