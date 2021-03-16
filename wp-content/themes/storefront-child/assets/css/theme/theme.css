@@ -385,8 +385,12 @@ body .site .content-area {
 }
 
 body.storefront-full-width-content.woocommerce-checkout .entry-header,
-body.storefront-full-width-content.woocommerce-cart .entry-header {
-  padding-top: 5.9968353111rem;
+body.storefront-full-width-content.woocommerce-cart .entry-header,
+body.storefront-full-width-content.page-id-14 .entry-header,
+body.storefront-full-width-content.page-id-23 .entry-header,
+body.storefront-full-width-content.page-id-25 .entry-header,
+body.storefront-full-width-content.post-type-archive-product .entry-header {
+  padding: 5.9968353111rem 0;
   background-color: #F7CA6F;
   margin-bottom: 3rem;
 }
