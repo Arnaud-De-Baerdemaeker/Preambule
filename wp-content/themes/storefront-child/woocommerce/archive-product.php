@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
-
+get_template_part('templates/mini-hero.php');
 ?>
 
 <header class="entry-header">
