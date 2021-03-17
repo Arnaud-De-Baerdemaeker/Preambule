@@ -1,31 +1,42 @@
 h1 {
-    font-family: ivypresto-headline, serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 2.5rem;
-    color: $black;
+	font-family: ivypresto-headline, serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 2.5rem;
+	color: $black;
 }
 
 h2 {
-    font-family: ivypresto-headline, serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 2.5rem;
-    color: $black;
-    @include mq(large) {
-        font-size: 3.875rem;
-        line-height: 4.6875rem;
-    }
+	font-family: ivypresto-headline, serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 2.5rem;
+	color: $black;
+	@include mq(large) {
+		font-size: 3.875rem;
+		line-height: 4.6875rem;
+	}
 
-    span {
-        color: $yellow-darker;
-    }
+	span {
+		color: $yellow-darker;
+	}
 }
 
 h3 {
-    font-family: ivypresto-headline, serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1.25rem;
-    color: $black;
+	font-family: ivypresto-headline, serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 1.25rem;
+	color: $black;
+}
+
+h4 {
+	font-family: azo-sans-web, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 0.875rem;
+	margin-bottom: 0;
+	color: $yellow-dark;
+	text-transform: uppercase;
+	letter-spacing: 0.063rem;
 }

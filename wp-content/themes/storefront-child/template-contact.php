@@ -13,13 +13,13 @@ get_template_part('templates/mini-hero');
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<div class="container">
-			<section>
+		<div class="container contact">
+			<section class="contact__message">
 				<h3><?php _e('You can send us a message', 'preambule'); ?></h3>
 				<?php the_content(); ?>
 			</section>
 
-			<section>
+			<section class="contact__call">
 				<h3><?php _e('Or you can call us directly', 'preambule'); ?></h3>
 				<?php
 				if(have_rows('our_coordinates')):
@@ -31,8 +31,8 @@ get_template_part('templates/mini-hero');
 							$input = get_sub_field('coordinate_input');
 							?>
 							<li>
-								<?php echo $name; ?><br />
-								<?php echo $input; ?>
+								<h4><?php echo $name; ?></h4>
+								<span><?php echo $input; ?></span>
 							</li>
 						<?php
 						endwhile;

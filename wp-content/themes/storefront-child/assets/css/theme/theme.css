@@ -1081,6 +1081,12 @@ input[type=search]:focus {
   display: none;
 }
 
+.btn__text .wpcf7-form-control.wpcf7-submit, button.btn__text .wpcf7-form-control.wpcf7-submit, .wc-proceed-to-checkout .button.checkout-button.btn__text .wpcf7-form-control.wpcf7-submit {
+  background-color: unset;
+  color: #000000;
+  padding: 0;
+}
+
 .btn__footer, button.btn__footer, .wc-proceed-to-checkout .button.checkout-button.btn__footer {
   color: white;
   font-family: open-sans, sans-serif;
@@ -1171,6 +1177,10 @@ input[type=search]:focus {
   }
 }
 
+.icon-border--borderless .icon--up {
+  bottom: 3.313rem;
+}
+
 .icon-border--borderless .icon.twin {
   top: 0.5rem;
 }
@@ -1228,6 +1238,10 @@ li a.added_to_cart.wc-forward:after {
   display: none;
 }
 
+.marginless {
+  margin-left: 0;
+}
+
 h1 {
   font-family: ivypresto-headline, serif;
   font-weight: 600;
@@ -1261,6 +1275,17 @@ h3 {
   font-style: normal;
   font-size: 1.25rem;
   color: #000000;
+}
+
+h4 {
+  font-family: azo-sans-web, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  color: #F5B42C;
+  text-transform: uppercase;
+  letter-spacing: 0.063rem;
 }
 
 .container, body .site .entry-content, body .site .entry-title {
@@ -2185,18 +2210,18 @@ div.select-selected:after {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.checkout.woocommerce-checkout {
+.checkout.woocommerce-checkout, .wpcf7-form.init {
   font-family: azo-sans-web, serif;
   font-size: 0.875rem;
 }
 
-.checkout.woocommerce-checkout label {
+.checkout.woocommerce-checkout label, .wpcf7-form.init label {
   color: #F5B42C;
   text-transform: uppercase;
   letter-spacing: 0.063rem;
 }
 
-.checkout.woocommerce-checkout input[type=text], .checkout.woocommerce-checkout input[type=tel], .checkout.woocommerce-checkout input[type=email], .checkout.woocommerce-checkout textarea {
+.checkout.woocommerce-checkout input[type=text], .checkout.woocommerce-checkout input[type=tel], .checkout.woocommerce-checkout input[type=email], .checkout.woocommerce-checkout textarea, .wpcf7-form.init input[type=text], .wpcf7-form.init input[type=tel], .wpcf7-form.init input[type=email], .wpcf7-form.init textarea {
   border-radius: 0.188rem;
   background-color: #EEEEEE;
   border-color: unset;
@@ -2216,6 +2241,51 @@ label .required {
 
 #order_review #payment .payment_methods li input[type=radio]:first-child:checked + label:before {
   color: #F5B42C;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contact__message {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  padding-right: 5rem;
+}
+
+.contact .contact__message .wpcf7-form.init {
+  margin-bottom: 0;
+}
+
+.contact .contact__message .wpcf7-form.init p:nth-of-type(1), .contact .contact__message .wpcf7-form.init p:nth-of-type(3) {
+  float: left;
+  margin-right: 2rem;
+}
+
+.contact .contact__call {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.contact .contact__call ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.contact .contact__call ul li {
+  margin-top: 1rem;
+}
+
+.contact .contact__call ul li:first-child {
+  margin-top: 0;
+}
+
+.contact .contact__call ul li span {
+  color: #000000;
+  font-family: azo-sans-web, serif;
+  font-size: 0.875rem;
 }
 
 .product-list {
