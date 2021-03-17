@@ -3,19 +3,35 @@
 		<h3><?php echo $args['title']; ?></h3>
 		<p><?php echo $args['text']; ?></p>
 		<?php
-			if($args['link']): ?>
-				<a href="<?php echo $args['link']['url']; ?>" class="btn btn__text">
-					<?php echo $args['link']['title']; ?>
-					<span class="icon-border icon-border--borderless">
-						<span>
-							<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
-						</span>
-						<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
+		if($args['link']):
+		?>
+			<a href="<?php echo $args['link']['url']; ?>" class="btn btn__text">
+				<?php echo $args['link']['title']; ?>
+				<span class="icon-border icon-border--borderless">
+					<span>
+						<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
 					</span>
-				</a>
-			<?php else: // If link is a repeater, show links.
-
-			endif;
+					<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
+				</span>
+			</a>
+		<?php
+		elseif($args['link_repeater']):
+			for($i = 0; $i < count($args['link_repeater']); $i++):
+				?>
+					<a href="<?php $args['link_repeater'][$i]['producer_links_link']; ?>" class="btn btn__text">
+						<?php echo $args['link_repeater'][$i]['producer_links_name']; ?>
+						<span class="icon-border icon-border--borderless">
+							<span>
+								<i class="fa fa-long-arrow-right icon" aria-hidden="true"></i>
+							</span>
+							<i class="fa fa-long-arrow-right icon twin" aria-hidden="true"></i>
+						</span>
+					</a>
+				<?php
+			endfor;
+			?>
+		<?php
+		endif;
 		?>
 	</div>
 
