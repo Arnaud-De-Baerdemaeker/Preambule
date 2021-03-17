@@ -241,3 +241,5 @@ function js_file_change() {
 // }
 
 // add_action('woocommerce_widget_shopping_cart_buttons', 'my_woocommerce_widget_shopping_cart_button_view_cart', 10);
+
+add_filter( 'woocommerce_widget_cart_is_hidden', '__return_true' );
