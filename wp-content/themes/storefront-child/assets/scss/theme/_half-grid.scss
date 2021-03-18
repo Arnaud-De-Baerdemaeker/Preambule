@@ -43,6 +43,7 @@
 		top: 0;
 		@include mq(medium) {
 			position: absolute;
+			width: 100%;
 		}
 		@include mq(xmedium) {
 			left: 50%;

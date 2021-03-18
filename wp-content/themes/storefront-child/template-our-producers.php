@@ -13,7 +13,7 @@ get_template_part('templates/mini-hero');
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<div class="container">
+		<div class="">
 			<?php
 			if(have_rows('producers')):
 				while(have_rows('producers')): the_row();

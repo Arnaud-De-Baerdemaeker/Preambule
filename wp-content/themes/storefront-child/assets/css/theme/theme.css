@@ -1055,6 +1055,19 @@ input[type=search]:focus {
   display: none;
 }
 
+.btn__text--repeated, button.btn__text--repeated, .wc-proceed-to-checkout .button.checkout-button.btn__text--repeated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.btn__text--repeated:nth-of-type(2), button.btn__text--repeated:nth-of-type(2), .wc-proceed-to-checkout .button.checkout-button.btn__text--repeated:nth-of-type(2) {
+  margin-top: -3rem;
+}
+
 .btn__text .wpcf7-form-control.wpcf7-submit, button.btn__text .wpcf7-form-control.wpcf7-submit, .wc-proceed-to-checkout .button.checkout-button.btn__text .wpcf7-form-control.wpcf7-submit {
   background-color: unset;
   color: #000000;
@@ -1454,6 +1467,7 @@ h4 {
 @media (min-width: 48em) {
   .half-grid__outer-grid {
     position: absolute;
+    width: 100%;
   }
 }
 
