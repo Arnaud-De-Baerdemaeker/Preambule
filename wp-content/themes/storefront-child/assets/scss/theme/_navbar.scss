@@ -37,7 +37,7 @@
 		position: relative;
 
 		@include mq($until: small2) {
-			top: -1.3rem;
+			top: -3.1rem;
 		}
 		@include mq(small2) {
 			top: -1.3rem;
