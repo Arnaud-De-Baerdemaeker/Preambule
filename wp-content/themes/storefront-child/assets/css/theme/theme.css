@@ -392,7 +392,6 @@ body.storefront-full-width-content.page-id-25 .entry-header,
 body.storefront-full-width-content.post-type-archive-product .entry-header {
   padding: 5.9968353111rem 0;
   background-color: #F7CA6F;
-  margin-bottom: 3rem;
 }
 
 a:focus,
@@ -727,35 +726,10 @@ input[type=search]:focus {
 }
 
 .brand__title {
-  margin-left: 2.25rem;
+  margin-left: 1rem;
   height: 3.75rem;
   position: relative;
-}
-
-@media (max-width: 23.74em) {
-  .brand__title {
-    top: -3.1rem;
-  }
-}
-
-@media (min-width: 23.75em) {
-  .brand__title {
-    top: -1.3rem;
-    margin-left: 1rem;
-  }
-}
-
-@media (min-width: 48em) {
-  .brand__title {
-    margin-left: 2.25rem;
-  }
-}
-
-@media (min-width: 75em) {
-  .brand__title {
-    margin-left: 1rem;
-    top: -1.3rem;
-  }
+  top: -1.3rem;
 }
 
 .brand__title--white {
@@ -2243,16 +2217,20 @@ label .required {
   color: #F5B42C;
 }
 
-.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 56.25em) {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-.contact .contact__message {
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
-  padding-right: 5rem;
+@media (min-width: 56.25em) {
+  .contact .contact__message {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    padding-right: 5rem;
+  }
 }
 
 .contact .contact__message h3 {
@@ -2260,12 +2238,21 @@ label .required {
 }
 
 .contact .contact__message .wpcf7-form.init {
+  width: 100%;
   margin-bottom: 0;
 }
 
-.contact .contact__message .wpcf7-form.init p:nth-of-type(1), .contact .contact__message .wpcf7-form.init p:nth-of-type(3) {
-  float: left;
-  margin-right: 2rem;
+@media (min-width: 75em) {
+  .contact .contact__message .wpcf7-form.init p:nth-of-type(1), .contact .contact__message .wpcf7-form.init p:nth-of-type(3) {
+    float: left;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .contact .contact__message .wpcf7-form.init p:nth-of-type(1), .contact .contact__message .wpcf7-form.init p:nth-of-type(3) {
+    margin-right: 2rem;
+  }
 }
 
 .contact .contact__message .wpcf7-form.init p:nth-last-of-type(-n+2) {
@@ -2278,7 +2265,33 @@ label .required {
 
 .contact .contact__message .wpcf7-form.init p:last-of-type .btn.btn__text, .contact .contact__message .wpcf7-form.init p:last-of-type li a.btn__text.added_to_cart.wc-forward, li .contact .contact__message .wpcf7-form.init p:last-of-type a.btn__text.added_to_cart.wc-forward {
   margin-top: 3rem;
-  margin-bottom: 0;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 56.25em) {
+  .contact .contact__message .wpcf7-form.init p:last-of-type .btn.btn__text, .contact .contact__message .wpcf7-form.init p:last-of-type li a.btn__text.added_to_cart.wc-forward, li .contact .contact__message .wpcf7-form.init p:last-of-type a.btn__text.added_to_cart.wc-forward {
+    margin-bottom: 0;
+  }
+}
+
+.contact .contact__message .wpcf7-form.init label {
+  display: block;
+}
+
+.contact .contact__message .wpcf7-form.init label span {
+  display: inherit;
+}
+
+@media (min-width: 20em) {
+  .contact .contact__message .wpcf7-form.init label span input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 75em) {
+  .contact .contact__message .wpcf7-form.init label span input {
+    width: unset;
+  }
 }
 
 .contact .contact__call {

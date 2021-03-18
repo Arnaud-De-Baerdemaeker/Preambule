@@ -11,7 +11,7 @@ get_header();
 get_template_part('templates/mini-hero');
 ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area sct-wrap">
 	<main id="main" class="site-main" role="main">
 		<div class="container contact">
 			<section class="contact__message">

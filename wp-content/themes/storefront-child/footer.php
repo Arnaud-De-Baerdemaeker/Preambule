@@ -14,7 +14,7 @@
 <!-- <html> -->
 	<!-- <body> -->
 		<!-- #page -->
-			<footer class="footer">
+			<footer class="footer sct-wrap">
 				<div class="container">
 					<div class="footer__content">
 						<div class="footer__infos">

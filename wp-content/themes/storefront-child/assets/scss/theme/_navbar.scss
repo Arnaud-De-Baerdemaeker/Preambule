@@ -32,25 +32,10 @@
 	}
 	
 	&__title {
-		margin-left: 2.25rem;
+		margin-left: 1rem;
 		height: 3.75rem;
 		position: relative;
-
-		@include mq($until: small2) {
-			top: -3.1rem;
-		}
-		@include mq(small2) {
-			top: -1.3rem;
-			margin-left: 1rem;
-		}
-		@include mq(medium) {
-			margin-left: 2.25rem;
-			
-		}
-		@include mq(xlarge) {
-			margin-left: 1rem;
-			top: -1.3rem;
-		}
+		top: -1.3rem;
 
 		&--white {
 			color: $white;
