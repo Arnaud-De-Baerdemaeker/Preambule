@@ -75,13 +75,13 @@
 								<h3>Suivez-nous</h3>
 								<ul class="social-list navigation__list">
 									<li class="social-list__item">
-										<a title="Facebook" href="https://www.facebook.com/preambulebelgium" class="social-list__link">
+										<a title="Facebook" href="https://www.facebook.com/preambulebelgium" target="_blank" class="social-list__link">
 											<i class="fa fa-facebook-square icon icon--left icon-envelope" aria-hidden="true"></i> Facebook
 										</a>
 									</li>
 									
 									<li class="social-list__item">
-										<a title="Instagram" href="https://www.instagram.com/preambule.belgium/" class="social-list__link">
+										<a title="Instagram" href="https://www.instagram.com/preambule.belgium/" target="_blank" class="social-list__link">
 											<i class="fa fa-instagram icon icon--left icon-envelope" aria-hidden="true"></i> Instagram
 										</a>
 									</li>
