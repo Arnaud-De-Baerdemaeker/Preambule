@@ -29,6 +29,14 @@
 		transform: translate3d(0, -10px, 0);
 	}
 
+	&--smaller {
+		height: unset;
+
+		&:not(:first-of-type) {
+			margin-top: 1rem;
+		}
+	}
+
 	&__text {
 		display: inline-flex;
 		border-style: solid;
@@ -66,10 +74,12 @@
 		&--repeated {
 			display: flex;
 			width: fit-content;
+		}
 
-			&:nth-of-type(2) {
-				margin-top: -3rem;
-			}
+		&--smaller {
+			padding-top: 0;
+			padding-bottom: 0;
+			height: unset;
 		}
 
 		.wpcf7-form-control.wpcf7-submit {
@@ -171,6 +181,10 @@
 	&--left {
 		margin-left: 0;
 		margin-right: 0.625rem;
+	}
+
+	&--darker {
+		border-color: $yellow-dark;
 	}
 
 	.twin {

@@ -123,6 +123,10 @@
 			@include mq(xmedium) {
 				margin-bottom: 0;
 			}
+
+			&.btn.btn--smaller:not(:last-child) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
