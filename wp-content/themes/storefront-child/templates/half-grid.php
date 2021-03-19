@@ -18,7 +18,7 @@
 		elseif($args['link_repeater']):
 			for($i = 0; $i < count($args['link_repeater']); $i++):
 				?>
-					<a href="<?php $args['link_repeater'][$i]['producer_links_link']; ?>" class="btn btn--smaller">
+					<a href="<?php echo esc_url($args['link_repeater'][$i]['producer_links_link']); ?>" target="_blank" class="btn btn--smaller">
 						<?php echo $args['link_repeater'][$i]['producer_links_name']; ?>
 						<span class="icon-border icon-border--darker">
 							<span>
